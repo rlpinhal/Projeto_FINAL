@@ -1,0 +1,673 @@
+categoria,ano,emissao_mt
+Acre,2000,41.0
+Alagoas,2000,7.0
+Amapa,2000,4.0
+Amazonas,2000,41.0
+Bahia,2000,102.0
+Ceara,2000,26.0
+Distrito Federal,2000,6.0
+Espirito Santo,2000,23.0
+Goias,2000,100.0
+Maranhao,2000,149.0
+Mato Grosso,2000,476.0
+Mato Grosso do Sul,2000,105.0
+Minas Gerais,2000,175.0
+Nao Alocado,2000,70.0
+Para,2000,431.0
+Paraiba,2000,9.0
+Parana,2000,76.0
+Pernambuco,2000,17.0
+Piaui,2000,20.0
+Rio Grande do Norte,2000,10.0
+Rio Grande do Sul,2000,109.0
+Rio de Janeiro,2000,46.0
+Rondonia,2000,174.0
+Roraima,2000,25.0
+Santa Catarina,2000,44.0
+Sao Paulo,2000,152.0
+Sergipe,2000,7.0
+Tocantins,2000,82.0
+Acre,2001,36.0
+Alagoas,2001,7.0
+Amapa,2001,3.0
+Amazonas,2001,36.0
+Bahia,2001,97.0
+Ceara,2001,24.0
+Distrito Federal,2001,6.0
+Espirito Santo,2001,21.0
+Goias,2001,95.0
+Maranhao,2001,122.0
+Mato Grosso,2001,490.0
+Mato Grosso do Sul,2001,102.0
+Minas Gerais,2001,168.0
+Nao Alocado,2001,62.0
+Para,2001,563.0
+Paraiba,2001,9.0
+Parana,2001,73.0
+Pernambuco,2001,18.0
+Piaui,2001,24.0
+Rio Grande do Norte,2001,9.0
+Rio Grande do Sul,2001,105.0
+Rio de Janeiro,2001,46.0
+Rondonia,2001,183.0
+Roraima,2001,30.0
+Santa Catarina,2001,43.0
+Sao Paulo,2001,153.0
+Sergipe,2001,7.0
+Tocantins,2001,77.0
+Acre,2002,54.0
+Alagoas,2002,7.0
+Amapa,2002,4.0
+Amazonas,2002,48.0
+Bahia,2002,94.0
+Ceara,2002,24.0
+Distrito Federal,2002,6.0
+Espirito Santo,2002,21.0
+Goias,2002,96.0
+Maranhao,2002,115.0
+Mato Grosso,2002,626.0
+Mato Grosso do Sul,2002,101.0
+Minas Gerais,2002,177.0
+Nao Alocado,2002,68.0
+Para,2002,505.0
+Paraiba,2002,9.0
+Parana,2002,73.0
+Pernambuco,2002,18.0
+Piaui,2002,19.0
+Rio Grande do Norte,2002,9.0
+Rio Grande do Sul,2002,101.0
+Rio de Janeiro,2002,48.0
+Rondonia,2002,218.0
+Roraima,2002,24.0
+Santa Catarina,2002,44.0
+Sao Paulo,2002,150.0
+Sergipe,2002,7.0
+Tocantins,2002,62.0
+Acre,2003,58.0
+Alagoas,2003,7.0
+Amapa,2003,3.0
+Amazonas,2003,75.0
+Bahia,2003,89.0
+Ceara,2003,24.0
+Distrito Federal,2003,6.0
+Espirito Santo,2003,21.0
+Goias,2003,102.0
+Maranhao,2003,167.0
+Mato Grosso,2003,888.0
+Mato Grosso do Sul,2003,122.0
+Minas Gerais,2003,179.0
+Nao Alocado,2003,70.0
+Para,2003,629.0
+Paraiba,2003,9.0
+Parana,2003,77.0
+Pernambuco,2003,17.0
+Piaui,2003,18.0
+Rio Grande do Norte,2003,9.0
+Rio Grande do Sul,2003,111.0
+Rio de Janeiro,2003,47.0
+Rondonia,2003,306.0
+Roraima,2003,28.0
+Santa Catarina,2003,45.0
+Sao Paulo,2003,151.0
+Sergipe,2003,7.0
+Tocantins,2003,67.0
+Acre,2004,45.0
+Alagoas,2004,7.0
+Amapa,2004,3.0
+Amazonas,2004,65.0
+Bahia,2004,112.0
+Ceara,2004,26.0
+Distrito Federal,2004,6.0
+Espirito Santo,2004,21.0
+Goias,2004,105.0
+Maranhao,2004,148.0
+Mato Grosso,2004,785.0
+Mato Grosso do Sul,2004,106.0
+Minas Gerais,2004,189.0
+Nao Alocado,2004,76.0
+Para,2004,698.0
+Paraiba,2004,9.0
+Parana,2004,74.0
+Pernambuco,2004,19.0
+Piaui,2004,32.0
+Rio Grande do Norte,2004,10.0
+Rio Grande do Sul,2004,114.0
+Rio de Janeiro,2004,48.0
+Rondonia,2004,259.0
+Roraima,2004,25.0
+Santa Catarina,2004,44.0
+Sao Paulo,2004,150.0
+Sergipe,2004,7.0
+Tocantins,2004,75.0
+Acre,2005,46.0
+Alagoas,2005,7.0
+Amapa,2005,3.0
+Amazonas,2005,73.0
+Bahia,2005,99.0
+Ceara,2005,26.0
+Distrito Federal,2005,6.0
+Espirito Santo,2005,20.0
+Goias,2005,94.0
+Maranhao,2005,139.0
+Mato Grosso,2005,607.0
+Mato Grosso do Sul,2005,100.0
+Minas Gerais,2005,181.0
+Nao Alocado,2005,77.0
+Para,2005,567.0
+Paraiba,2005,9.0
+Parana,2005,70.0
+Pernambuco,2005,19.0
+Piaui,2005,26.0
+Rio Grande do Norte,2005,10.0
+Rio Grande do Sul,2005,101.0
+Rio de Janeiro,2005,52.0
+Rondonia,2005,249.0
+Roraima,2005,25.0
+Santa Catarina,2005,44.0
+Sao Paulo,2005,146.0
+Sergipe,2005,7.0
+Tocantins,2005,67.0
+Acre,2006,37.0
+Alagoas,2006,7.0
+Amapa,2006,3.0
+Amazonas,2006,70.0
+Bahia,2006,93.0
+Ceara,2006,26.0
+Distrito Federal,2006,6.0
+Espirito Santo,2006,21.0
+Goias,2006,86.0
+Maranhao,2006,141.0
+Mato Grosso,2006,390.0
+Mato Grosso do Sul,2006,91.0
+Minas Gerais,2006,180.0
+Nao Alocado,2006,78.0
+Para,2006,541.0
+Paraiba,2006,9.0
+Parana,2006,70.0
+Pernambuco,2006,19.0
+Piaui,2006,21.0
+Rio Grande do Norte,2006,10.0
+Rio Grande do Sul,2006,101.0
+Rio de Janeiro,2006,51.0
+Rondonia,2006,171.0
+Roraima,2006,21.0
+Santa Catarina,2006,44.0
+Sao Paulo,2006,147.0
+Sergipe,2006,7.0
+Tocantins,2006,61.0
+Acre,2007,31.0
+Alagoas,2007,8.0
+Amapa,2007,3.0
+Amazonas,2007,53.0
+Bahia,2007,92.0
+Ceara,2007,25.0
+Distrito Federal,2007,6.0
+Espirito Santo,2007,27.0
+Goias,2007,83.0
+Maranhao,2007,162.0
+Mato Grosso,2007,292.0
+Mato Grosso do Sul,2007,78.0
+Minas Gerais,2007,183.0
+Nao Alocado,2007,58.0
+Para,2007,454.0
+Paraiba,2007,10.0
+Parana,2007,69.0
+Pernambuco,2007,20.0
+Piaui,2007,21.0
+Rio Grande do Norte,2007,10.0
+Rio Grande do Sul,2007,95.0
+Rio de Janeiro,2007,58.0
+Rondonia,2007,137.0
+Roraima,2007,22.0
+Santa Catarina,2007,43.0
+Sao Paulo,2007,154.0
+Sergipe,2007,8.0
+Tocantins,2007,53.0
+Acre,2008,31.0
+Alagoas,2008,8.0
+Amapa,2008,4.0
+Amazonas,2008,46.0
+Bahia,2008,103.0
+Ceara,2008,25.0
+Distrito Federal,2008,6.0
+Espirito Santo,2008,24.0
+Goias,2008,84.0
+Maranhao,2008,133.0
+Mato Grosso,2008,309.0
+Mato Grosso do Sul,2008,78.0
+Minas Gerais,2008,179.0
+Nao Alocado,2008,58.0
+Para,2008,468.0
+Paraiba,2008,10.0
+Parana,2008,72.0
+Pernambuco,2008,21.0
+Piaui,2008,24.0
+Rio Grande do Norte,2008,10.0
+Rio Grande do Sul,2008,107.0
+Rio de Janeiro,2008,67.0
+Rondonia,2008,103.0
+Roraima,2008,26.0
+Santa Catarina,2008,47.0
+Sao Paulo,2008,154.0
+Sergipe,2008,9.0
+Tocantins,2008,56.0
+Acre,2009,32.0
+Alagoas,2009,8.0
+Amapa,2009,4.0
+Amazonas,2009,48.0
+Bahia,2009,97.0
+Ceara,2009,26.0
+Distrito Federal,2009,7.0
+Espirito Santo,2009,26.0
+Goias,2009,83.0
+Maranhao,2009,104.0
+Mato Grosso,2009,187.0
+Mato Grosso do Sul,2009,74.0
+Minas Gerais,2009,168.0
+Nao Alocado,2009,53.0
+Para,2009,320.0
+Paraiba,2009,11.0
+Parana,2009,68.0
+Pernambuco,2009,21.0
+Piaui,2009,20.0
+Rio Grande do Norte,2009,10.0
+Rio Grande do Sul,2009,102.0
+Rio de Janeiro,2009,65.0
+Rondonia,2009,71.0
+Roraima,2009,15.0
+Santa Catarina,2009,45.0
+Sao Paulo,2009,148.0
+Sergipe,2009,9.0
+Tocantins,2009,51.0
+Acre,2010,33.0
+Alagoas,2010,8.0
+Amapa,2010,4.0
+Amazonas,2010,59.0
+Bahia,2010,90.0
+Ceara,2010,26.0
+Distrito Federal,2010,7.0
+Espirito Santo,2010,30.0
+Goias,2010,85.0
+Maranhao,2010,96.0
+Mato Grosso,2010,185.0
+Mato Grosso do Sul,2010,75.0
+Minas Gerais,2010,174.0
+Nao Alocado,2010,59.0
+Para,2010,278.0
+Paraiba,2010,10.0
+Parana,2010,72.0
+Pernambuco,2010,22.0
+Piaui,2010,31.0
+Rio Grande do Norte,2010,10.0
+Rio Grande do Sul,2010,110.0
+Rio de Janeiro,2010,68.0
+Rondonia,2010,68.0
+Roraima,2010,13.0
+Santa Catarina,2010,47.0
+Sao Paulo,2010,155.0
+Sergipe,2010,9.0
+Tocantins,2010,51.0
+Acre,2011,28.0
+Alagoas,2011,8.0
+Amapa,2011,3.0
+Amazonas,2011,43.0
+Bahia,2011,94.0
+Ceara,2011,27.0
+Distrito Federal,2011,8.0
+Espirito Santo,2011,31.0
+Goias,2011,85.0
+Maranhao,2011,99.0
+Mato Grosso,2011,232.0
+Mato Grosso do Sul,2011,71.0
+Minas Gerais,2011,177.0
+Nao Alocado,2011,63.0
+Para,2011,253.0
+Paraiba,2011,11.0
+Parana,2011,71.0
+Pernambuco,2011,25.0
+Piaui,2011,23.0
+Rio Grande do Norte,2011,11.0
+Rio Grande do Sul,2011,108.0
+Rio de Janeiro,2011,70.0
+Rondonia,2011,102.0
+Roraima,2011,12.0
+Santa Catarina,2011,45.0
+Sao Paulo,2011,164.0
+Sergipe,2011,9.0
+Tocantins,2011,52.0
+Acre,2012,27.0
+Alagoas,2012,8.0
+Amapa,2012,4.0
+Amazonas,2012,45.0
+Bahia,2012,106.0
+Ceara,2012,29.0
+Distrito Federal,2012,8.0
+Espirito Santo,2012,32.0
+Goias,2012,90.0
+Maranhao,2012,119.0
+Mato Grosso,2012,212.0
+Mato Grosso do Sul,2012,73.0
+Minas Gerais,2012,185.0
+Nao Alocado,2012,62.0
+Para,2012,268.0
+Paraiba,2012,12.0
+Parana,2012,75.0
+Pernambuco,2012,25.0
+Piaui,2012,42.0
+Rio Grande do Norte,2012,12.0
+Rio Grande do Sul,2012,109.0
+Rio de Janeiro,2012,76.0
+Rondonia,2012,88.0
+Roraima,2012,14.0
+Santa Catarina,2012,48.0
+Sao Paulo,2012,167.0
+Sergipe,2012,9.0
+Tocantins,2012,63.0
+Acre,2013,31.0
+Alagoas,2013,8.0
+Amapa,2013,4.0
+Amazonas,2013,55.0
+Bahia,2013,113.0
+Ceara,2013,32.0
+Distrito Federal,2013,8.0
+Espirito Santo,2013,34.0
+Goias,2013,93.0
+Maranhao,2013,116.0
+Mato Grosso,2013,262.0
+Mato Grosso do Sul,2013,76.0
+Minas Gerais,2013,191.0
+Nao Alocado,2013,63.0
+Para,2013,302.0
+Paraiba,2013,12.0
+Parana,2013,80.0
+Pernambuco,2013,25.0
+Piaui,2013,35.0
+Rio Grande do Norte,2013,13.0
+Rio Grande do Sul,2013,124.0
+Rio de Janeiro,2013,79.0
+Rondonia,2013,98.0
+Roraima,2013,22.0
+Santa Catarina,2013,51.0
+Sao Paulo,2013,172.0
+Sergipe,2013,10.0
+Tocantins,2013,79.0
+Acre,2014,33.0
+Alagoas,2014,8.0
+Amapa,2014,5.0
+Amazonas,2014,56.0
+Bahia,2014,104.0
+Ceara,2014,35.0
+Distrito Federal,2014,9.0
+Espirito Santo,2014,35.0
+Goias,2014,94.0
+Maranhao,2014,112.0
+Mato Grosso,2014,240.0
+Mato Grosso do Sul,2014,75.0
+Minas Gerais,2014,187.0
+Nao Alocado,2014,74.0
+Para,2014,296.0
+Paraiba,2014,13.0
+Parana,2014,80.0
+Pernambuco,2014,27.0
+Piaui,2014,33.0
+Rio Grande do Norte,2014,14.0
+Rio Grande do Sul,2014,110.0
+Rio de Janeiro,2014,77.0
+Rondonia,2014,99.0
+Roraima,2014,28.0
+Santa Catarina,2014,52.0
+Sao Paulo,2014,167.0
+Sergipe,2014,10.0
+Tocantins,2014,70.0
+Acre,2015,36.0
+Alagoas,2015,8.0
+Amapa,2015,4.0
+Amazonas,2015,79.0
+Bahia,2015,96.0
+Ceara,2015,35.0
+Distrito Federal,2015,9.0
+Espirito Santo,2015,37.0
+Goias,2015,93.0
+Maranhao,2015,124.0
+Mato Grosso,2015,261.0
+Mato Grosso do Sul,2015,75.0
+Minas Gerais,2015,178.0
+Nao Alocado,2015,73.0
+Para,2015,341.0
+Paraiba,2015,14.0
+Parana,2015,79.0
+Pernambuco,2015,27.0
+Piaui,2015,31.0
+Rio Grande do Norte,2015,13.0
+Rio Grande do Sul,2015,112.0
+Rio de Janeiro,2015,77.0
+Rondonia,2015,129.0
+Roraima,2015,35.0
+Santa Catarina,2015,50.0
+Sao Paulo,2015,159.0
+Sergipe,2015,10.0
+Tocantins,2015,71.0
+Acre,2016,33.0
+Alagoas,2016,9.0
+Amapa,2016,7.0
+Amazonas,2016,107.0
+Bahia,2016,88.0
+Ceara,2016,33.0
+Distrito Federal,2016,8.0
+Espirito Santo,2016,35.0
+Goias,2016,90.0
+Maranhao,2016,130.0
+Mato Grosso,2016,226.0
+Mato Grosso do Sul,2016,76.0
+Minas Gerais,2016,176.0
+Nao Alocado,2016,60.0
+Para,2016,375.0
+Paraiba,2016,14.0
+Parana,2016,79.0
+Pernambuco,2016,26.0
+Piaui,2016,22.0
+Rio Grande do Norte,2016,11.0
+Rio Grande do Sul,2016,105.0
+Rio de Janeiro,2016,69.0
+Rondonia,2016,140.0
+Roraima,2016,30.0
+Santa Catarina,2016,50.0
+Sao Paulo,2016,152.0
+Sergipe,2016,9.0
+Tocantins,2016,63.0
+Acre,2017,36.0
+Alagoas,2017,9.0
+Amapa,2017,4.0
+Amazonas,2017,78.0
+Bahia,2017,92.0
+Ceara,2017,34.0
+Distrito Federal,2017,8.0
+Espirito Santo,2017,35.0
+Goias,2017,91.0
+Maranhao,2017,103.0
+Mato Grosso,2017,233.0
+Mato Grosso do Sul,2017,74.0
+Minas Gerais,2017,171.0
+Nao Alocado,2017,66.0
+Para,2017,308.0
+Paraiba,2017,15.0
+Parana,2017,78.0
+Pernambuco,2017,26.0
+Piaui,2017,24.0
+Rio Grande do Norte,2017,12.0
+Rio Grande do Sul,2017,108.0
+Rio de Janeiro,2017,71.0
+Rondonia,2017,132.0
+Roraima,2017,23.0
+Santa Catarina,2017,50.0
+Sao Paulo,2017,155.0
+Sergipe,2017,9.0
+Tocantins,2017,60.0
+Acre,2018,39.0
+Alagoas,2018,8.0
+Amapa,2018,3.0
+Amazonas,2018,76.0
+Bahia,2018,92.0
+Ceara,2018,33.0
+Distrito Federal,2018,7.0
+Espirito Santo,2018,34.0
+Goias,2018,89.0
+Maranhao,2018,104.0
+Mato Grosso,2018,238.0
+Mato Grosso do Sul,2018,72.0
+Minas Gerais,2018,166.0
+Nao Alocado,2018,66.0
+Para,2018,337.0
+Paraiba,2018,15.0
+Parana,2018,77.0
+Pernambuco,2018,25.0
+Piaui,2018,25.0
+Rio Grande do Norte,2018,11.0
+Rio Grande do Sul,2018,104.0
+Rio de Janeiro,2018,68.0
+Rondonia,2018,121.0
+Roraima,2018,26.0
+Santa Catarina,2018,50.0
+Sao Paulo,2018,150.0
+Sergipe,2018,9.0
+Tocantins,2018,59.0
+Acre,2019,71.0
+Alagoas,2019,9.0
+Amapa,2019,4.0
+Amazonas,2019,131.0
+Bahia,2019,100.0
+Ceara,2019,34.0
+Distrito Federal,2019,7.0
+Espirito Santo,2019,31.0
+Goias,2019,93.0
+Maranhao,2019,129.0
+Mato Grosso,2019,299.0
+Mato Grosso do Sul,2019,77.0
+Minas Gerais,2019,167.0
+Nao Alocado,2019,66.0
+Para,2019,467.0
+Paraiba,2019,14.0
+Parana,2019,80.0
+Pernambuco,2019,26.0
+Piaui,2019,35.0
+Rio Grande do Norte,2019,11.0
+Rio Grande do Sul,2019,110.0
+Rio de Janeiro,2019,69.0
+Rondonia,2019,160.0
+Roraima,2019,41.0
+Santa Catarina,2019,52.0
+Sao Paulo,2019,150.0
+Sergipe,2019,9.0
+Tocantins,2019,66.0
+Acre,2020,71.0
+Alagoas,2020,9.0
+Amapa,2020,3.0
+Amazonas,2020,131.0
+Bahia,2020,105.0
+Ceara,2020,32.0
+Distrito Federal,2020,7.0
+Espirito Santo,2020,31.0
+Goias,2020,96.0
+Maranhao,2020,140.0
+Mato Grosso,2020,289.0
+Mato Grosso do Sul,2020,79.0
+Minas Gerais,2020,169.0
+Nao Alocado,2020,61.0
+Para,2020,479.0
+Paraiba,2020,14.0
+Parana,2020,78.0
+Pernambuco,2020,24.0
+Piaui,2020,36.0
+Rio Grande do Norte,2020,11.0
+Rio Grande do Sul,2020,100.0
+Rio de Janeiro,2020,67.0
+Rondonia,2020,155.0
+Roraima,2020,26.0
+Santa Catarina,2020,49.0
+Sao Paulo,2020,146.0
+Sergipe,2020,9.0
+Tocantins,2020,63.0
+Acre,2021,75.0
+Alagoas,2021,10.0
+Amapa,2021,3.0
+Amazonas,2021,188.0
+Bahia,2021,114.0
+Ceara,2021,37.0
+Distrito Federal,2021,7.0
+Espirito Santo,2021,34.0
+Goias,2021,97.0
+Maranhao,2021,128.0
+Mato Grosso,2021,282.0
+Mato Grosso do Sul,2021,84.0
+Minas Gerais,2021,175.0
+Nao Alocado,2021,65.0
+Para,2021,538.0
+Paraiba,2021,15.0
+Parana,2021,81.0
+Pernambuco,2021,28.0
+Piaui,2021,33.0
+Rio Grande do Norte,2021,12.0
+Rio Grande do Sul,2021,123.0
+Rio de Janeiro,2021,74.0
+Rondonia,2021,169.0
+Roraima,2021,34.0
+Santa Catarina,2021,52.0
+Sao Paulo,2021,151.0
+Sergipe,2021,11.0
+Tocantins,2021,59.0
+Acre,2022,90.0
+Alagoas,2022,10.0
+Amapa,2022,7.0
+Amazonas,2022,216.0
+Bahia,2022,125.0
+Ceara,2022,34.0
+Distrito Federal,2022,7.0
+Espirito Santo,2022,33.0
+Goias,2022,98.0
+Maranhao,2022,140.0
+Mato Grosso,2022,341.0
+Mato Grosso do Sul,2022,73.0
+Minas Gerais,2022,179.0
+Nao Alocado,2022,63.0
+Para,2022,491.0
+Paraiba,2022,14.0
+Parana,2022,79.0
+Pernambuco,2022,26.0
+Piaui,2022,46.0
+Rio Grande do Norte,2022,12.0
+Rio Grande do Sul,2022,106.0
+Rio de Janeiro,2022,67.0
+Rondonia,2022,166.0
+Roraima,2022,29.0
+Santa Catarina,2022,52.0
+Sao Paulo,2022,157.0
+Sergipe,2022,10.0
+Tocantins,2022,67.0
+Acre,2023,51.0
+Alagoas,2023,10.0
+Amapa,2023,6.0
+Amazonas,2023,114.0
+Bahia,2023,132.0
+Ceara,2023,38.0
+Distrito Federal,2023,7.0
+Espirito Santo,2023,31.0
+Goias,2023,102.0
+Maranhao,2023,167.0
+Mato Grosso,2023,334.0
+Mato Grosso do Sul,2023,84.0
+Minas Gerais,2023,179.0
+Nao Alocado,2023,61.0
+Para,2023,436.0
+Paraiba,2023,15.0
+Parana,2023,78.0
+Pernambuco,2023,27.0
+Piaui,2023,45.0
+Rio Grande do Norte,2023,12.0
+Rio Grande do Sul,2023,98.0
+Rio de Janeiro,2023,69.0
+Rondonia,2023,144.0
+Roraima,2023,31.0
+Santa Catarina,2023,48.0
+Sao Paulo,2023,155.0
+Sergipe,2023,10.0
+Tocantins,2023,91.0

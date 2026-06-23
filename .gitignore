@@ -1,0 +1,14 @@
+__pycache__/
+.venv/
+venv/
+env/
+*.env
+.vscode/
+.idea/
+
+# Ignorar o CSV original pesado (usaremos o Parquet)
+dados/02.prata/SEEG/prata_seeg_all.csv
+
+# Outros arquivos muito pesados se houver (para evitar bloquear o github)
+dados/01.bronze/mapbiomas/mapbiomas-desmatamento-bacia-hidrografica.csv
+dados/02.prata/mapbiomas/prata_desmatamento.csv

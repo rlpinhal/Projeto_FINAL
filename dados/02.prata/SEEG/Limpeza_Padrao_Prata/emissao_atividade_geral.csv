@@ -1,0 +1,385 @@
+categoria,ano,valor_mt
+Agricultura,2000,376.0
+Agropecuaria (finalidade nao identificada),2000,15.0
+Cimento,2000,26.0
+Edificacoes,2000,30.0
+Geracao de eletricidade,2000,24.0
+Metalurgia,2000,47.0
+Outras materias primas e industrias,2000,33.0
+Outros (geral),2000,17.0
+Pecuaria,2000,1692.0
+Producao Industrial,2000,3.0
+Producao de combustiveis,2000,31.0
+Quimica,2000,22.0
+Saneamento Basico,2000,49.0
+Transporte de carga,2000,68.0
+Transporte de passageiros,2000,62.0
+Vegetacao nativa,2000,32.0
+Agricultura,2001,368.0
+Agropecuaria (finalidade nao identificada),2001,16.0
+Cimento,2001,26.0
+Edificacoes,2001,30.0
+Geracao de eletricidade,2001,28.0
+Metalurgia,2001,45.0
+Outras materias primas e industrias,2001,32.0
+Outros (geral),2001,16.0
+Pecuaria,2001,1778.0
+Producao Industrial,2001,3.0
+Producao de combustiveis,2001,32.0
+Quimica,2001,21.0
+Saneamento Basico,2001,52.0
+Transporte de carga,2001,70.0
+Transporte de passageiros,2001,63.0
+Vegetacao nativa,2001,26.0
+Agricultura,2002,365.0
+Agropecuaria (finalidade nao identificada),2002,16.0
+Cimento,2002,25.0
+Edificacoes,2002,31.0
+Geracao de eletricidade,2002,23.0
+Metalurgia,2002,49.0
+Outras materias primas e industrias,2002,33.0
+Outros (geral),2002,16.0
+Pecuaria,2002,1897.0
+Producao Industrial,2002,3.0
+Producao de combustiveis,2002,33.0
+Quimica,2002,22.0
+Saneamento Basico,2002,55.0
+Transporte de carga,2002,73.0
+Transporte de passageiros,2002,63.0
+Vegetacao nativa,2002,25.0
+Agricultura,2003,500.0
+Agropecuaria (finalidade nao identificada),2003,16.0
+Cimento,2003,22.0
+Edificacoes,2003,29.0
+Geracao de eletricidade,2003,22.0
+Metalurgia,2003,52.0
+Outras materias primas e industrias,2003,32.0
+Outros (geral),2003,19.0
+Pecuaria,2003,2360.0
+Producao Industrial,2003,3.0
+Producao de combustiveis,2003,33.0
+Quimica,2003,21.0
+Saneamento Basico,2003,57.0
+Transporte de carga,2003,71.0
+Transporte de passageiros,2003,62.0
+Vegetacao nativa,2003,30.0
+Agricultura,2004,510.0
+Agropecuaria (finalidade nao identificada),2004,16.0
+Cimento,2004,21.0
+Edificacoes,2004,30.0
+Geracao de eletricidade,2004,27.0
+Metalurgia,2004,53.0
+Outras materias primas e industrias,2004,33.0
+Outros (geral),2004,17.0
+Pecuaria,2004,2261.0
+Producao Industrial,2004,4.0
+Producao de combustiveis,2004,34.0
+Quimica,2004,24.0
+Saneamento Basico,2004,59.0
+Transporte de carga,2004,76.0
+Transporte de passageiros,2004,65.0
+Vegetacao nativa,2004,29.0
+Agricultura,2005,382.0
+Agropecuaria (finalidade nao identificada),2005,16.0
+Cimento,2005,24.0
+Edificacoes,2005,30.0
+Geracao de eletricidade,2005,28.0
+Metalurgia,2005,53.0
+Outras materias primas e industrias,2005,34.0
+Outros (geral),2005,15.0
+Pecuaria,2005,1987.0
+Producao Industrial,2005,4.0
+Producao de combustiveis,2005,41.0
+Quimica,2005,23.0
+Saneamento Basico,2005,61.0
+Transporte de carga,2005,76.0
+Transporte de passageiros,2005,67.0
+Vegetacao nativa,2005,29.0
+Agricultura,2006,316.0
+Agropecuaria (finalidade nao identificada),2006,16.0
+Cimento,2006,25.0
+Edificacoes,2006,30.0
+Geracao de eletricidade,2006,28.0
+Metalurgia,2006,51.0
+Outras materias primas e industrias,2006,34.0
+Outros (geral),2006,13.0
+Pecuaria,2006,1685.0
+Producao Industrial,2006,4.0
+Producao de combustiveis,2006,40.0
+Quimica,2006,24.0
+Saneamento Basico,2006,63.0
+Transporte de carga,2006,78.0
+Transporte de passageiros,2006,69.0
+Vegetacao nativa,2006,26.0
+Agricultura,2007,280.0
+Agropecuaria (finalidade nao identificada),2007,17.0
+Cimento,2007,28.0
+Edificacoes,2007,30.0
+Geracao de eletricidade,2007,28.0
+Metalurgia,2007,65.0
+Outras materias primas e industrias,2007,37.0
+Outros (geral),2007,12.0
+Pecuaria,2007,1448.0
+Producao Industrial,2007,4.0
+Producao de combustiveis,2007,41.0
+Quimica,2007,19.0
+Saneamento Basico,2007,63.0
+Transporte de carga,2007,82.0
+Transporte de passageiros,2007,72.0
+Vegetacao nativa,2007,27.0
+Agricultura,2008,308.0
+Agropecuaria (finalidade nao identificada),2008,18.0
+Cimento,2008,31.0
+Edificacoes,2008,30.0
+Geracao de eletricidade,2008,35.0
+Metalurgia,2008,62.0
+Outras materias primas e industrias,2008,38.0
+Outros (geral),2008,14.0
+Pecuaria,2008,1407.0
+Producao Industrial,2008,4.0
+Producao de combustiveis,2008,44.0
+Quimica,2008,17.0
+Saneamento Basico,2008,65.0
+Transporte de carga,2008,86.0
+Transporte de passageiros,2008,74.0
+Vegetacao nativa,2008,27.0
+Agricultura,2009,283.0
+Agropecuaria (finalidade nao identificada),2009,18.0
+Cimento,2009,33.0
+Edificacoes,2009,29.0
+Geracao de eletricidade,2009,24.0
+Metalurgia,2009,51.0
+Outras materias primas e industrias,2009,35.0
+Outros (geral),2009,13.0
+Pecuaria,2009,1068.0
+Producao Industrial,2009,4.0
+Producao de combustiveis,2009,50.0
+Quimica,2009,17.0
+Saneamento Basico,2009,65.0
+Transporte de carga,2009,84.0
+Transporte de passageiros,2009,74.0
+Vegetacao nativa,2009,23.0
+Agricultura,2010,295.0
+Agropecuaria (finalidade nao identificada),2010,18.0
+Cimento,2010,36.0
+Edificacoes,2010,29.0
+Geracao de eletricidade,2010,37.0
+Metalurgia,2010,60.0
+Outras materias primas e industrias,2010,39.0
+Outros (geral),2010,11.0
+Pecuaria,2010,1014.0
+Producao Industrial,2010,5.0
+Producao de combustiveis,2010,44.0
+Quimica,2010,17.0
+Saneamento Basico,2010,67.0
+Transporte de carga,2010,92.0
+Transporte de passageiros,2010,84.0
+Vegetacao nativa,2010,28.0
+Agricultura,2011,283.0
+Agropecuaria (finalidade nao identificada),2011,18.0
+Cimento,2011,38.0
+Edificacoes,2011,29.0
+Geracao de eletricidade,2011,33.0
+Metalurgia,2011,66.0
+Outras materias primas e industrias,2011,41.0
+Outros (geral),2011,13.0
+Pecuaria,2011,1049.0
+Producao Industrial,2011,5.0
+Producao de combustiveis,2011,43.0
+Quimica,2011,18.0
+Saneamento Basico,2011,68.0
+Transporte de carga,2011,98.0
+Transporte de passageiros,2011,95.0
+Vegetacao nativa,2011,30.0
+Agricultura,2012,333.0
+Agropecuaria (finalidade nao identificada),2012,18.0
+Cimento,2012,40.0
+Edificacoes,2012,29.0
+Geracao de eletricidade,2012,46.0
+Metalurgia,2012,66.0
+Outras materias primas e industrias,2012,40.0
+Outros (geral),2012,14.0
+Pecuaria,2012,1045.0
+Producao Industrial,2012,5.0
+Producao de combustiveis,2012,45.0
+Quimica,2012,17.0
+Saneamento Basico,2012,70.0
+Transporte de carga,2012,104.0
+Transporte de passageiros,2012,107.0
+Vegetacao nativa,2012,32.0
+Agricultura,2013,369.0
+Agropecuaria (finalidade nao identificada),2013,18.0
+Cimento,2013,42.0
+Edificacoes,2013,28.0
+Geracao de eletricidade,2013,67.0
+Metalurgia,2013,64.0
+Outras materias primas e industrias,2013,41.0
+Outros (geral),2013,19.0
+Pecuaria,2013,1142.0
+Producao Industrial,2013,5.0
+Producao de combustiveis,2013,49.0
+Quimica,2013,16.0
+Saneamento Basico,2013,74.0
+Transporte de carga,2013,110.0
+Transporte de passageiros,2013,108.0
+Vegetacao nativa,2013,35.0
+Agricultura,2014,339.0
+Agropecuaria (finalidade nao identificada),2014,19.0
+Cimento,2014,43.0
+Edificacoes,2014,29.0
+Geracao de eletricidade,2014,82.0
+Metalurgia,2014,62.0
+Outras materias primas e industrias,2014,42.0
+Outros (geral),2014,16.0
+Pecuaria,2014,1110.0
+Producao Industrial,2014,5.0
+Producao de combustiveis,2014,53.0
+Quimica,2014,16.0
+Saneamento Basico,2014,77.0
+Transporte de carga,2014,111.0
+Transporte de passageiros,2014,112.0
+Vegetacao nativa,2014,27.0
+Agricultura,2015,342.0
+Agropecuaria (finalidade nao identificada),2015,19.0
+Cimento,2015,39.0
+Edificacoes,2015,29.0
+Geracao de eletricidade,2015,78.0
+Metalurgia,2015,62.0
+Outras materias primas e industrias,2015,40.0
+Outros (geral),2015,17.0
+Pecuaria,2015,1239.0
+Producao Industrial,2015,5.0
+Producao de combustiveis,2015,51.0
+Quimica,2015,16.0
+Saneamento Basico,2015,80.0
+Transporte de carga,2015,105.0
+Transporte de passageiros,2015,104.0
+Vegetacao nativa,2015,29.0
+Agricultura,2016,293.0
+Agropecuaria (finalidade nao identificada),2016,19.0
+Cimento,2016,34.0
+Edificacoes,2016,29.0
+Geracao de eletricidade,2016,55.0
+Metalurgia,2016,62.0
+Outras materias primas e industrias,2016,37.0
+Outros (geral),2016,16.0
+Pecuaria,2016,1290.0
+Producao Industrial,2016,5.0
+Producao de combustiveis,2016,50.0
+Quimica,2016,16.0
+Saneamento Basico,2016,83.0
+Transporte de carga,2016,102.0
+Transporte de passageiros,2016,105.0
+Vegetacao nativa,2016,26.0
+Agricultura,2017,315.0
+Agropecuaria (finalidade nao identificada),2017,20.0
+Cimento,2017,32.0
+Edificacoes,2017,30.0
+Geracao de eletricidade,2017,60.0
+Metalurgia,2017,64.0
+Outras materias primas e industrias,2017,37.0
+Outros (geral),2017,16.0
+Pecuaria,2017,1140.0
+Producao Industrial,2017,5.0
+Producao de combustiveis,2017,50.0
+Quimica,2017,17.0
+Saneamento Basico,2017,84.0
+Transporte de carga,2017,103.0
+Transporte de passageiros,2017,107.0
+Vegetacao nativa,2017,28.0
+Agricultura,2018,304.0
+Agropecuaria (finalidade nao identificada),2018,20.0
+Cimento,2018,32.0
+Edificacoes,2018,31.0
+Geracao de eletricidade,2018,51.0
+Metalurgia,2018,62.0
+Outras materias primas e industrias,2018,36.0
+Outros (geral),2018,16.0
+Pecuaria,2018,1166.0
+Producao Industrial,2018,6.0
+Producao de combustiveis,2018,50.0
+Quimica,2018,16.0
+Saneamento Basico,2018,86.0
+Transporte de carga,2018,101.0
+Transporte de passageiros,2018,99.0
+Vegetacao nativa,2018,30.0
+Agricultura,2019,380.0
+Agropecuaria (finalidade nao identificada),2019,20.0
+Cimento,2019,33.0
+Edificacoes,2019,30.0
+Geracao de eletricidade,2019,53.0
+Metalurgia,2019,58.0
+Outras materias primas e industrias,2019,34.0
+Outros (geral),2019,19.0
+Pecuaria,2019,1489.0
+Producao Industrial,2019,6.0
+Producao de combustiveis,2019,51.0
+Quimica,2019,16.0
+Saneamento Basico,2019,87.0
+Transporte de carga,2019,103.0
+Transporte de passageiros,2019,100.0
+Vegetacao nativa,2019,26.0
+Agricultura,2020,397.0
+Agropecuaria (finalidade nao identificada),2020,21.0
+Cimento,2020,36.0
+Edificacoes,2020,31.0
+Geracao de eletricidade,2020,52.0
+Metalurgia,2020,57.0
+Outras materias primas e industrias,2020,32.0
+Outros (geral),2020,34.0
+Pecuaria,2020,1455.0
+Producao Industrial,2020,6.0
+Producao de combustiveis,2020,44.0
+Quimica,2020,14.0
+Saneamento Basico,2020,87.0
+Transporte de carga,2020,101.0
+Transporte de passageiros,2020,91.0
+Vegetacao nativa,2020,22.0
+Agricultura,2021,409.0
+Agropecuaria (finalidade nao identificada),2021,21.0
+Cimento,2021,38.0
+Edificacoes,2021,31.0
+Geracao de eletricidade,2021,76.0
+Metalurgia,2021,65.0
+Outras materias primas e industrias,2021,34.0
+Outros (geral),2021,26.0
+Pecuaria,2021,1596.0
+Producao Industrial,2021,6.0
+Producao de combustiveis,2021,43.0
+Quimica,2021,15.0
+Saneamento Basico,2021,88.0
+Transporte de carga,2021,111.0
+Transporte de passageiros,2021,100.0
+Vegetacao nativa,2021,20.0
+Agricultura,2022,405.0
+Agropecuaria (finalidade nao identificada),2022,21.0
+Cimento,2022,36.0
+Edificacoes,2022,31.0
+Geracao de eletricidade,2022,39.0
+Metalurgia,2022,62.0
+Outras materias primas e industrias,2022,36.0
+Outros (geral),2022,27.0
+Pecuaria,2022,1689.0
+Producao Industrial,2022,6.0
+Producao de combustiveis,2022,42.0
+Quimica,2022,14.0
+Saneamento Basico,2022,87.0
+Transporte de carga,2022,116.0
+Transporte de passageiros,2022,108.0
+Vegetacao nativa,2022,18.0
+Agricultura,2023,464.0
+Agropecuaria (finalidade nao identificada),2023,23.0
+Cimento,2023,39.0
+Edificacoes,2023,32.0
+Geracao de eletricidade,2023,38.0
+Metalurgia,2023,59.0
+Outras materias primas e industrias,2023,35.0
+Outros (geral),2023,24.0
+Pecuaria,2023,1470.0
+Producao Industrial,2023,6.0
+Producao de combustiveis,2023,44.0
+Quimica,2023,13.0
+Saneamento Basico,2023,87.0
+Transporte de carga,2023,119.0
+Transporte de passageiros,2023,112.0
+Vegetacao nativa,2023,14.0

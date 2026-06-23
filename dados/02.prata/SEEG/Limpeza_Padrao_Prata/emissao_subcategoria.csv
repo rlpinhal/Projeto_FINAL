@@ -1,0 +1,776 @@
+categoria,ano,emissao_mt
+Aereo,2000,9.61
+Agropecuaria,2000,14.7898
+Aplicacao de residuos organicos,2000,3.5897
+Cimento,2000,10.4483
+Corretivo agricola,2000,9.4504
+Cultivo em sistema irrigado inundado,2000,10.3111
+Deposicao de dejetos em pastagem,2000,50.9551
+Desmatamento,2000,1622.2422
+Disposicao em aterros controlados ou lixoes,2000,18.2135
+Disposicao final em aterros sanitarios,2000,10.0689
+Exploracao de petroleo e gas natural,2000,9.1977
+Ferro gusa e aco,2000,5.0705
+Fertilizantes sinteticos nitrogenados,2000,10.7259
+Geracao de eletricidade (servico publico),2000,19.1311
+Nao ferrosos e outros da metalurgia,2000,4.2655
+Outras industrias,2000,7.1074
+Outras mudancas de uso da terra,2000,25.2124
+Outros,2000,55.08
+Processo de digestao de animais ruminantes,2000,312.3642
+Producao de cal,2000,4.7563
+Producao de cimento,2000,16.047
+Producao de ferro gusa e aco,2000,33.1371
+Quimica,2000,16.0092
+Refino de petroleo,2000,20.8949
+Regeneracao,2000,31.8196
+Residencial,2000,25.2689
+Residuos agricolas,2000,17.1047
+Rodoviario,2000,115.3743
+Tratamento e despejo de efluentes domesticos,2000,19.6626
+Tratamento e disposicao de dejetos animais,2000,18.201
+Uso em equipamento ou produto,2000,0.4859
+Aereo,2001,9.8811
+Agropecuaria,2001,16.1975
+Aplicacao de residuos organicos,2001,3.7094
+Cimento,2001,10.9685
+Corretivo agricola,2001,8.623
+Cultivo em sistema irrigado inundado,2001,10.0621
+Deposicao de dejetos em pastagem,2001,52.6899
+Desmatamento,2001,1679.7641
+Disposicao em aterros controlados ou lixoes,2001,18.6326
+Disposicao final em aterros sanitarios,2001,12.1555
+Exploracao de petroleo e gas natural,2001,10.2037
+Ferro gusa e aco,2001,5.0486
+Fertilizantes sinteticos nitrogenados,2001,10.6261
+Geracao de eletricidade (servico publico),2001,21.6886
+Nao ferrosos e outros da metalurgia,2001,3.9876
+Outras industrias,2001,6.6332
+Outras mudancas de uso da terra,2001,27.2996
+Outros,2001,54.6045
+Processo de digestao de animais ruminantes,2001,325.9853
+Producao de cal,2001,4.569
+Producao de cimento,2001,15.2268
+Producao de ferro gusa e aco,2001,32.7621
+Quimica,2001,16.5396
+Refino de petroleo,2001,21.7465
+Regeneracao,2001,26.4066
+Residencial,2001,25.6546
+Residuos agricolas,2001,18.1924
+Rodoviario,2001,117.1858
+Tratamento e despejo de efluentes domesticos,2001,19.9343
+Tratamento e disposicao de dejetos animais,2001,19.0731
+Uso em equipamento ou produto,2001,0.6121
+Aereo,2002,9.4658
+Agropecuaria,2002,15.8977
+Aplicacao de residuos organicos,2002,3.84
+Cimento,2002,10.2524
+Corretivo agricola,2002,10.6306
+Cultivo em sistema irrigado inundado,2002,10.465
+Deposicao de dejetos em pastagem,2002,55.0753
+Desmatamento,2002,1784.0774
+Disposicao em aterros controlados ou lixoes,2002,18.9126
+Disposicao final em aterros sanitarios,2002,14.0781
+Exploracao de petroleo e gas natural,2002,10.3838
+Ferro gusa e aco,2002,5.4084
+Fertilizantes sinteticos nitrogenados,2002,11.6808
+Geracao de eletricidade (servico publico),2002,17.1967
+Nao ferrosos e outros da metalurgia,2002,4.1891
+Outras industrias,2002,6.572
+Outras mudancas de uso da terra,2002,26.4227
+Outros,2002,58.1506
+Processo de digestao de animais ruminantes,2002,331.3029
+Producao de cal,2002,4.7071
+Producao de cimento,2002,14.39
+Producao de ferro gusa e aco,2002,35.8127
+Quimica,2002,16.7536
+Refino de petroleo,2002,21.3217
+Regeneracao,2002,25.1461
+Residencial,2002,26.0631
+Residuos agricolas,2002,20.3476
+Rodoviario,2002,119.6941
+Tratamento e despejo de efluentes domesticos,2002,20.2289
+Tratamento e disposicao de dejetos animais,2002,18.9962
+Uso em equipamento ou produto,2002,0.7355
+Aereo,2003,6.7689
+Agropecuaria,2003,16.0173
+Aplicacao de residuos organicos,2003,4.1181
+Cimento,2003,8.828
+Corretivo agricola,2003,12.6228
+Cultivo em sistema irrigado inundado,2003,10.1118
+Deposicao de dejetos em pastagem,2003,57.7294
+Desmatamento,2003,2350.3327
+Disposicao em aterros controlados ou lixoes,2003,19.1006
+Disposicao final em aterros sanitarios,2003,15.8041
+Exploracao de petroleo e gas natural,2003,10.4903
+Ferro gusa e aco,2003,5.4065
+Fertilizantes sinteticos nitrogenados,2003,14.6071
+Geracao de eletricidade (servico publico),2003,16.1301
+Nao ferrosos e outros da metalurgia,2003,5.0094
+Outras industrias,2003,5.9261
+Outras mudancas de uso da terra,2003,31.5502
+Outros,2003,58.7923
+Processo de digestao de animais ruminantes,2003,348.8429
+Producao de cal,2003,4.8093
+Producao de cimento,2003,13.096
+Producao de ferro gusa e aco,2003,36.6219
+Quimica,2003,16.0817
+Refino de petroleo,2003,21.3796
+Regeneracao,2003,30.4588
+Residencial,2003,25.2935
+Residuos agricolas,2003,22.2317
+Rodoviario,2003,119.8627
+Tratamento e despejo de efluentes domesticos,2003,20.5479
+Tratamento e disposicao de dejetos animais,2003,19.8956
+Uso em equipamento ou produto,2003,0.851
+Aereo,2004,7.2237
+Agropecuaria,2004,15.8386
+Aplicacao de residuos organicos,2004,4.2984
+Cimento,2004,8.22
+Corretivo agricola,2004,12.5545
+Cultivo em sistema irrigado inundado,2004,11.2706
+Deposicao de dejetos em pastagem,2004,60.113
+Desmatamento,2004,2228.595
+Disposicao em aterros controlados ou lixoes,2004,19.2338
+Disposicao final em aterros sanitarios,2004,16.7151
+Exploracao de petroleo e gas natural,2004,11.0369
+Ferro gusa e aco,2004,5.595
+Fertilizantes sinteticos nitrogenados,2004,14.633
+Geracao de eletricidade (servico publico),2004,20.3722
+Nao ferrosos e outros da metalurgia,2004,5.276
+Outras industrias,2004,6.0846
+Outras mudancas de uso da terra,2004,41.7544
+Outros,2004,63.1685
+Processo de digestao de animais ruminantes,2004,364.9051
+Producao de cal,2004,5.2288
+Producao de cimento,2004,13.2734
+Producao de ferro gusa e aco,2004,36.7954
+Quimica,2004,16.759
+Refino de petroleo,2004,22.1581
+Regeneracao,2004,29.1349
+Residencial,2004,25.7609
+Residuos agricolas,2004,22.1739
+Rodoviario,2004,127.0983
+Tratamento e despejo de efluentes domesticos,2004,21.0876
+Tratamento e disposicao de dejetos animais,2004,20.6404
+Uso em equipamento ou produto,2004,0.9854
+Aereo,2005,7.8407
+Agropecuaria,2005,15.7701
+Aplicacao de residuos organicos,2005,4.3875
+Cimento,2005,9.2188
+Corretivo agricola,2005,8.1029
+Cultivo em sistema irrigado inundado,2005,10.7963
+Deposicao de dejetos em pastagem,2005,61.0704
+Desmatamento,2005,1821.8192
+Disposicao em aterros controlados ou lixoes,2005,19.3902
+Disposicao final em aterros sanitarios,2005,18.2496
+Exploracao de petroleo e gas natural,2005,16.0813
+Ferro gusa e aco,2005,5.8468
+Fertilizantes sinteticos nitrogenados,2005,14.6544
+Geracao de eletricidade (servico publico),2005,20.9953
+Nao ferrosos e outros da metalurgia,2005,5.4141
+Outras industrias,2005,6.3083
+Outras mudancas de uso da terra,2005,44.4875
+Outros,2005,65.0888
+Processo de digestao de animais ruminantes,2005,368.4251
+Producao de cal,2005,5.0872
+Producao de cimento,2005,14.349
+Producao de ferro gusa e aco,2005,35.979
+Quimica,2005,16.8803
+Refino de petroleo,2005,23.8519
+Regeneracao,2005,29.2173
+Residencial,2005,25.6841
+Residuos agricolas,2005,22.6232
+Rodoviario,2005,127.5911
+Tratamento e despejo de efluentes domesticos,2005,21.351
+Tratamento e disposicao de dejetos animais,2005,20.9962
+Uso em equipamento ou produto,2005,1.1481
+Aereo,2006,7.3548
+Agropecuaria,2006,15.9323
+Aplicacao de residuos organicos,2006,4.6701
+Cimento,2006,9.9904
+Corretivo agricola,2006,8.0374
+Cultivo em sistema irrigado inundado,2006,10.6675
+Deposicao de dejetos em pastagem,2006,60.8014
+Desmatamento,2006,1462.8219
+Disposicao em aterros controlados ou lixoes,2006,19.6883
+Disposicao final em aterros sanitarios,2006,19.9004
+Exploracao de petroleo e gas natural,2006,14.4093
+Ferro gusa e aco,2006,5.8628
+Fertilizantes sinteticos nitrogenados,2006,15.0924
+Geracao de eletricidade (servico publico),2006,20.7432
+Nao ferrosos e outros da metalurgia,2006,5.641
+Outras industrias,2006,6.2959
+Outras mudancas de uso da terra,2006,34.1734
+Outros,2006,65.6942
+Processo de digestao de animais ruminantes,2006,366.6149
+Producao de cal,2006,5.138
+Producao de cimento,2006,15.44
+Producao de ferro gusa e aco,2006,34.3885
+Quimica,2006,17.4783
+Refino de petroleo,2006,24.0878
+Regeneracao,2006,25.9242
+Residencial,2006,25.7534
+Residuos agricolas,2006,23.0376
+Rodoviario,2006,131.8495
+Tratamento e despejo de efluentes domesticos,2006,21.6536
+Tratamento e disposicao de dejetos animais,2006,21.4046
+Uso em equipamento ou produto,2006,1.3455
+Aereo,2007,8.0755
+Agropecuaria,2007,16.8125
+Aplicacao de residuos organicos,2007,5.1779
+Cimento,2007,11.1589
+Corretivo agricola,2007,10.5707
+Cultivo em sistema irrigado inundado,2007,10.142
+Deposicao de dejetos em pastagem,2007,59.0924
+Desmatamento,2007,1207.6578
+Disposicao em aterros controlados ou lixoes,2007,19.7876
+Disposicao final em aterros sanitarios,2007,20.544
+Exploracao de petroleo e gas natural,2007,14.26
+Ferro gusa e aco,2007,6.4643
+Fertilizantes sinteticos nitrogenados,2007,18.1137
+Geracao de eletricidade (servico publico),2007,19.4338
+Nao ferrosos e outros da metalurgia,2007,6.0155
+Outras industrias,2007,7.2151
+Outras mudancas de uso da terra,2007,29.2752
+Outros,2007,65.1819
+Processo de digestao de animais ruminantes,2007,346.1515
+Producao de cal,2007,5.3818
+Producao de cimento,2007,17.2
+Producao de ferro gusa e aco,2007,47.1005
+Quimica,2007,19.2159
+Refino de petroleo,2007,25.1676
+Regeneracao,2007,27.3433
+Residencial,2007,25.7153
+Residuos agricolas,2007,24.6549
+Rodoviario,2007,136.2952
+Tratamento e despejo de efluentes domesticos,2007,21.34
+Tratamento e disposicao de dejetos animais,2007,20.9965
+Uso em equipamento ou produto,2007,1.6117
+Aereo,2008,8.631
+Agropecuaria,2008,18.3671
+Aplicacao de residuos organicos,2008,5.6824
+Cimento,2008,12.4179
+Corretivo agricola,2008,11.4351
+Cultivo em sistema irrigado inundado,2008,11.125
+Deposicao de dejetos em pastagem,2008,59.7031
+Desmatamento,2008,1188.3165
+Disposicao em aterros controlados ou lixoes,2008,20.0497
+Disposicao final em aterros sanitarios,2008,20.9826
+Exploracao de petroleo e gas natural,2008,16.995
+Ferro gusa e aco,2008,6.9599
+Fertilizantes sinteticos nitrogenados,2008,16.395
+Geracao de eletricidade (servico publico),2008,26.586
+Nao ferrosos e outros da metalurgia,2008,5.6782
+Outras industrias,2008,8.0442
+Outras mudancas de uso da terra,2008,30.2305
+Outros,2008,65.5837
+Processo de digestao de animais ruminantes,2008,351.8332
+Producao de cal,2008,5.4046
+Producao de cimento,2008,18.884
+Producao de ferro gusa e aco,2008,43.782
+Quimica,2008,16.8825
+Refino de petroleo,2008,25.7595
+Regeneracao,2008,26.5326
+Residencial,2008,26.002
+Residuos agricolas,2008,26.0916
+Rodoviario,2008,141.5196
+Tratamento e despejo de efluentes domesticos,2008,22.1216
+Tratamento e disposicao de dejetos animais,2008,21.692
+Uso em equipamento ou produto,2008,1.9264
+Aereo,2009,8.6816
+Agropecuaria,2009,17.6693
+Aplicacao de residuos organicos,2009,5.6832
+Cimento,2009,13.6773
+Corretivo agricola,2009,9.1005
+Cultivo em sistema irrigado inundado,2009,11.4526
+Deposicao de dejetos em pastagem,2009,60.7039
+Desmatamento,2009,819.0142
+Disposicao em aterros controlados ou lixoes,2009,20.3372
+Disposicao final em aterros sanitarios,2009,20.9109
+Exploracao de petroleo e gas natural,2009,23.4251
+Ferro gusa e aco,2009,5.262
+Fertilizantes sinteticos nitrogenados,2009,16.9329
+Geracao de eletricidade (servico publico),2009,16.5969
+Nao ferrosos e outros da metalurgia,2009,4.6765
+Outras industrias,2009,8.1537
+Outras mudancas de uso da terra,2009,28.713
+Outros,2009,60.1219
+Processo de digestao de animais ruminantes,2009,358.46
+Producao de cal,2009,4.8056
+Producao de cimento,2009,19.031
+Producao de ferro gusa e aco,2009,35.5316
+Quimica,2009,16.8321
+Refino de petroleo,2009,25.6329
+Regeneracao,2009,22.9117
+Residencial,2009,26.0183
+Residuos agricolas,2009,25.5266
+Rodoviario,2009,139.225
+Tratamento e despejo de efluentes domesticos,2009,22.3617
+Tratamento e disposicao de dejetos animais,2009,22.2343
+Uso em equipamento ou produto,2009,2.2696
+Aereo,2010,9.7894
+Agropecuaria,2010,18.1928
+Aplicacao de residuos organicos,2010,5.9337
+Cimento,2010,14.7383
+Corretivo agricola,2010,11.3002
+Cultivo em sistema irrigado inundado,2010,10.7938
+Deposicao de dejetos em pastagem,2010,61.9925
+Desmatamento,2010,756.9658
+Disposicao em aterros controlados ou lixoes,2010,20.6039
+Disposicao final em aterros sanitarios,2010,22.0365
+Exploracao de petroleo e gas natural,2010,21.2603
+Ferro gusa e aco,2010,6.4274
+Fertilizantes sinteticos nitrogenados,2010,18.8447
+Geracao de eletricidade (servico publico),2010,26.6912
+Nao ferrosos e outros da metalurgia,2010,8.5554
+Outras industrias,2010,7.6086
+Outras mudancas de uso da terra,2010,28.7176
+Outros,2010,64.01
+Processo de digestao de animais ruminantes,2010,368.4963
+Producao de cal,2010,5.6513
+Producao de cimento,2010,21.2716
+Producao de ferro gusa e aco,2010,40.9733
+Quimica,2010,15.2044
+Refino de petroleo,2010,24.1181
+Regeneracao,2010,28.4993
+Residencial,2010,26.2056
+Residuos agricolas,2010,27.1801
+Rodoviario,2010,156.2916
+Tratamento e despejo de efluentes domesticos,2010,22.2767
+Tratamento e disposicao de dejetos animais,2010,22.8439
+Uso em equipamento ou produto,2010,2.6761
+Aereo,2011,10.9423
+Agropecuaria,2011,17.6669
+Aplicacao de residuos organicos,2011,5.5755
+Cimento,2011,15.6583
+Corretivo agricola,2011,14.0013
+Cultivo em sistema irrigado inundado,2011,12.0792
+Deposicao de dejetos em pastagem,2011,62.719
+Desmatamento,2011,783.1639
+Disposicao em aterros controlados ou lixoes,2011,20.6819
+Disposicao final em aterros sanitarios,2011,23.255
+Exploracao de petroleo e gas natural,2011,19.6828
+Ferro gusa e aco,2011,6.5317
+Fertilizantes sinteticos nitrogenados,2011,22.3158
+Geracao de eletricidade (servico publico),2011,20.0282
+Nao ferrosos e outros da metalurgia,2011,9.735
+Outras industrias,2011,8.2303
+Outras mudancas de uso da terra,2011,23.241
+Outros,2011,65.1328
+Processo de digestao de animais ruminantes,2011,361.9841
+Producao de cal,2011,6.0186
+Producao de cimento,2011,22.5106
+Producao de ferro gusa e aco,2011,44.5521
+Quimica,2011,18.3545
+Refino de petroleo,2011,24.7282
+Regeneracao,2011,29.6603
+Residencial,2011,25.5159
+Residuos agricolas,2011,28.7694
+Rodoviario,2011,171.706
+Tratamento e despejo de efluentes domesticos,2011,22.6817
+Tratamento e disposicao de dejetos animais,2011,24.9308
+Uso em equipamento ou produto,2011,3.1516
+Aereo,2012,11.5381
+Agropecuaria,2012,18.3248
+Aplicacao de residuos organicos,2012,5.6769
+Cimento,2012,15.8839
+Corretivo agricola,2012,16.2209
+Cultivo em sistema irrigado inundado,2012,10.7487
+Deposicao de dejetos em pastagem,2012,61.8972
+Desmatamento,2012,819.7247
+Disposicao em aterros controlados ou lixoes,2012,20.982
+Disposicao final em aterros sanitarios,2012,23.8884
+Exploracao de petroleo e gas natural,2012,20.4784
+Ferro gusa e aco,2012,6.5715
+Fertilizantes sinteticos nitrogenados,2012,22.1153
+Geracao de eletricidade (servico publico),2012,35.0605
+Nao ferrosos e outros da metalurgia,2012,9.5536
+Outras industrias,2012,7.7893
+Outras mudancas de uso da terra,2012,35.7169
+Outros,2012,64.7211
+Processo de digestao de animais ruminantes,2012,360.0503
+Producao de cal,2012,6.0808
+Producao de cimento,2012,24.4536
+Producao de ferro gusa e aco,2012,44.2916
+Quimica,2012,16.2828
+Refino de petroleo,2012,26.1475
+Regeneracao,2012,31.8169
+Residencial,2012,25.5867
+Residuos agricolas,2012,28.7903
+Rodoviario,2012,188.3952
+Tratamento e despejo de efluentes domesticos,2012,22.9672
+Tratamento e disposicao de dejetos animais,2012,25.0147
+Uso em equipamento ou produto,2012,3.642
+Aereo,2013,11.0751
+Agropecuaria,2013,18.3949
+Aplicacao de residuos organicos,2013,5.9567
+Cimento,2013,16.428
+Corretivo agricola,2013,15.9657
+Cultivo em sistema irrigado inundado,2013,10.9508
+Deposicao de dejetos em pastagem,2013,61.8769
+Desmatamento,2013,934.9543
+Disposicao em aterros controlados ou lixoes,2013,19.9725
+Disposicao final em aterros sanitarios,2013,27.9028
+Exploracao de petroleo e gas natural,2013,20.4888
+Ferro gusa e aco,2013,6.6045
+Fertilizantes sinteticos nitrogenados,2013,24.7088
+Geracao de eletricidade (servico publico),2013,55.5617
+Nao ferrosos e outros da metalurgia,2013,9.5983
+Outras industrias,2013,8.1467
+Outras mudancas de uso da terra,2013,53.5533
+Outros,2013,66.3277
+Processo de digestao de animais ruminantes,2013,360.7282
+Producao de cal,2013,6.16
+Producao de cimento,2013,25.8835
+Producao de ferro gusa e aco,2013,43.1194
+Quimica,2013,15.6651
+Refino de petroleo,2013,29.0196
+Regeneracao,2013,34.5223
+Residencial,2013,25.0868
+Residuos agricolas,2013,31.0413
+Rodoviario,2013,195.5248
+Tratamento e despejo de efluentes domesticos,2013,24.0383
+Tratamento e disposicao de dejetos animais,2013,24.8769
+Uso em equipamento ou produto,2013,4.1667
+Aereo,2014,11.2025
+Agropecuaria,2014,19.1298
+Aplicacao de residuos organicos,2014,6.0365
+Cimento,2014,16.4238
+Corretivo agricola,2014,16.8752
+Cultivo em sistema irrigado inundado,2014,11.3245
+Deposicao de dejetos em pastagem,2014,62.1383
+Desmatamento,2014,863.2823
+Disposicao em aterros controlados ou lixoes,2014,19.3516
+Disposicao final em aterros sanitarios,2014,31.1198
+Exploracao de petroleo e gas natural,2014,22.8438
+Ferro gusa e aco,2014,6.2812
+Fertilizantes sinteticos nitrogenados,2014,25.0408
+Geracao de eletricidade (servico publico),2014,70.1453
+Nao ferrosos e outros da metalurgia,2014,9.9902
+Outras industrias,2014,8.3152
+Outras mudancas de uso da terra,2014,55.3841
+Outros,2014,66.8811
+Processo de digestao de animais ruminantes,2014,362.1498
+Producao de cal,2014,5.9629
+Producao de cimento,2014,26.4932
+Producao de ferro gusa e aco,2014,41.3122
+Quimica,2014,15.0706
+Refino de petroleo,2014,30.8136
+Regeneracao,2014,27.0855
+Residencial,2014,25.5592
+Residuos agricolas,2014,31.7016
+Rodoviario,2014,200.2205
+Tratamento e despejo de efluentes domesticos,2014,24.2352
+Tratamento e disposicao de dejetos animais,2014,25.4362
+Uso em equipamento ou produto,2014,4.6763
+Aereo,2015,11.0495
+Agropecuaria,2015,19.2917
+Aplicacao de residuos organicos,2015,6.0787
+Cimento,2015,14.7289
+Corretivo agricola,2015,14.6162
+Cultivo em sistema irrigado inundado,2015,11.9069
+Deposicao de dejetos em pastagem,2015,62.3799
+Desmatamento,2015,986.6813
+Disposicao em aterros controlados ou lixoes,2015,18.5782
+Disposicao final em aterros sanitarios,2015,35.3665
+Exploracao de petroleo e gas natural,2015,22.7113
+Ferro gusa e aco,2015,6.2321
+Fertilizantes sinteticos nitrogenados,2015,22.8076
+Geracao de eletricidade (servico publico),2015,65.6265
+Nao ferrosos e outros da metalurgia,2015,8.9961
+Outras industrias,2015,7.3475
+Outras mudancas de uso da terra,2015,60.0777
+Outros,2015,64.3236
+Processo de digestao de animais ruminantes,2015,368.9896
+Producao de cal,2015,6.0711
+Producao de cimento,2015,24.1458
+Producao de ferro gusa e aco,2015,43.4325
+Quimica,2015,15.4662
+Refino de petroleo,2015,29.8598
+Regeneracao,2015,29.4856
+Residencial,2015,25.845
+Residuos agricolas,2015,33.312
+Rodoviario,2015,186.7416
+Tratamento e despejo de efluentes domesticos,2015,24.4008
+Tratamento e disposicao de dejetos animais,2015,26.1979
+Uso em equipamento ou produto,2015,5.0671
+Aereo,2016,10.1107
+Agropecuaria,2016,18.8459
+Aplicacao de residuos organicos,2016,5.961
+Cimento,2016,12.7735
+Corretivo agricola,2016,15.8549
+Cultivo em sistema irrigado inundado,2016,10.9296
+Deposicao de dejetos em pastagem,2016,62.6979
+Desmatamento,2016,993.6139
+Disposicao em aterros controlados ou lixoes,2016,17.9008
+Disposicao final em aterros sanitarios,2016,38.878
+Exploracao de petroleo e gas natural,2016,22.4225
+Ferro gusa e aco,2016,5.7768
+Fertilizantes sinteticos nitrogenados,2016,29.5824
+Geracao de eletricidade (servico publico),2016,42.8584
+Nao ferrosos e outros da metalurgia,2016,8.9768
+Outras industrias,2016,6.382
+Outras mudancas de uso da terra,2016,42.891
+Outros,2016,61.8614
+Processo de digestao de animais ruminantes,2016,374.3588
+Producao de cal,2016,6.0711
+Producao de cimento,2016,21.5711
+Producao de ferro gusa e aco,2016,43.8515
+Quimica,2016,15.0904
+Refino de petroleo,2016,28.6758
+Regeneracao,2016,26.165
+Residencial,2016,25.6974
+Residuos agricolas,2016,31.7493
+Rodoviario,2016,185.784
+Tratamento e despejo de efluentes domesticos,2016,24.5893
+Tratamento e disposicao de dejetos animais,2016,26.4488
+Uso em equipamento ou produto,2016,5.3774
+Aereo,2017,10.074
+Agropecuaria,2017,20.2561
+Aplicacao de residuos organicos,2017,6.0708
+Cimento,2017,12.0974
+Corretivo agricola,2017,17.6065
+Cultivo em sistema irrigado inundado,2017,11.774
+Deposicao de dejetos em pastagem,2017,60.8836
+Desmatamento,2017,866.2802
+Disposicao em aterros controlados ou lixoes,2017,16.9429
+Disposicao final em aterros sanitarios,2017,40.6201
+Exploracao de petroleo e gas natural,2017,22.5664
+Ferro gusa e aco,2017,8.0984
+Fertilizantes sinteticos nitrogenados,2017,29.8253
+Geracao de eletricidade (servico publico),2017,45.262
+Nao ferrosos e outros da metalurgia,2017,9.0066
+Outras industrias,2017,6.1862
+Outras mudancas de uso da terra,2017,43.167
+Outros,2017,61.558
+Processo de digestao de animais ruminantes,2017,367.561
+Producao de cal,2017,6.0719
+Producao de cimento,2017,20.0295
+Producao de ferro gusa e aco,2017,44.8734
+Quimica,2017,15.953
+Refino de petroleo,2017,28.74
+Regeneracao,2017,28.3029
+Residencial,2017,26.3264
+Residuos agricolas,2017,36.0688
+Rodoviario,2017,187.3388
+Tratamento e despejo de efluentes domesticos,2017,24.7615
+Tratamento e disposicao de dejetos animais,2017,26.759
+Uso em equipamento ou produto,2017,5.9185
+Aereo,2018,10.3448
+Agropecuaria,2018,19.8448
+Aplicacao de residuos organicos,2018,6.1936
+Cimento,2018,12.036
+Corretivo agricola,2018,20.468
+Cultivo em sistema irrigado inundado,2018,11.3223
+Deposicao de dejetos em pastagem,2018,60.4309
+Desmatamento,2018,889.4921
+Disposicao em aterros controlados ou lixoes,2018,16.1124
+Disposicao final em aterros sanitarios,2018,43.1004
+Exploracao de petroleo e gas natural,2018,22.3159
+Ferro gusa e aco,2018,8.0842
+Fertilizantes sinteticos nitrogenados,2018,29.145
+Geracao de eletricidade (servico publico),2018,36.4891
+Nao ferrosos e outros da metalurgia,2018,6.2394
+Outras industrias,2018,6.1246
+Outras mudancas de uso da terra,2018,36.85
+Outros,2018,63.865
+Processo de digestao de animais ruminantes,2018,365.415
+Producao de cal,2018,6.0712
+Producao de cimento,2018,19.8806
+Producao de ferro gusa e aco,2018,45.685
+Quimica,2018,15.2704
+Refino de petroleo,2018,27.3206
+Regeneracao,2018,30.1962
+Residencial,2018,27.104
+Residuos agricolas,2018,35.0693
+Rodoviario,2018,176.8331
+Tratamento e despejo de efluentes domesticos,2018,24.8723
+Tratamento e disposicao de dejetos animais,2018,26.8491
+Uso em equipamento ou produto,2018,6.3691
+Aereo,2019,10.1137
+Agropecuaria,2019,20.2133
+Aplicacao de residuos organicos,2019,6.3629
+Cimento,2019,12.2863
+Corretivo agricola,2019,20.6523
+Cultivo em sistema irrigado inundado,2019,10.4525
+Deposicao de dejetos em pastagem,2019,60.5559
+Desmatamento,2019,1289.4613
+Disposicao em aterros controlados ou lixoes,2019,15.4189
+Disposicao final em aterros sanitarios,2019,44.7464
+Exploracao de petroleo e gas natural,2019,23.5526
+Ferro gusa e aco,2019,7.7961
+Fertilizantes sinteticos nitrogenados,2019,29.3433
+Geracao de eletricidade (servico publico),2019,38.3677
+Nao ferrosos e outros da metalurgia,2019,6.7062
+Outras industrias,2019,5.5179
+Outras mudancas de uso da terra,2019,37.0523
+Outros,2019,62.1344
+Processo de digestao de animais ruminantes,2019,366.8423
+Producao de cal,2019,5.9249
+Producao de cimento,2019,20.9965
+Producao de ferro gusa e aco,2019,42.0233
+Quimica,2019,15.1519
+Refino de petroleo,2019,27.4508
+Regeneracao,2019,26.4279
+Residencial,2019,26.8249
+Residuos agricolas,2019,36.3352
+Rodoviario,2019,179.1645
+Tratamento e despejo de efluentes domesticos,2019,25.1798
+Tratamento e disposicao de dejetos animais,2019,26.9084
+Uso em equipamento ou produto,2019,6.8197
+Aereo,2020,5.8129
+Agropecuaria,2020,20.5356
+Aplicacao de residuos organicos,2020,6.4761
+Cimento,2020,13.6017
+Corretivo agricola,2020,21.608
+Cultivo em sistema irrigado inundado,2020,10.3696
+Deposicao de dejetos em pastagem,2020,61.1969
+Desmatamento,2020,1281.7209
+Disposicao em aterros controlados ou lixoes,2020,14.8671
+Disposicao final em aterros sanitarios,2020,45.4489
+Exploracao de petroleo e gas natural,2020,23.3618
+Ferro gusa e aco,2020,7.4462
+Fertilizantes sinteticos nitrogenados,2020,34.6677
+Geracao de eletricidade (servico publico),2020,33.1787
+Nao ferrosos e outros da metalurgia,2020,7.0898
+Outras industrias,2020,4.2849
+Outras mudancas de uso da terra,2020,28.1543
+Outros,2020,58.8953
+Processo de digestao de animais ruminantes,2020,371.978
+Producao de cal,2020,5.8517
+Producao de cimento,2020,22.6436
+Producao de ferro gusa e aco,2020,40.5343
+Quimica,2020,12.2889
+Refino de petroleo,2020,26.5419
+Regeneracao,2020,22.3268
+Residencial,2020,27.7038
+Residuos agricolas,2020,37.4087
+Rodoviario,2020,173.0335
+Tratamento e despejo de efluentes domesticos,2020,25.3253
+Tratamento e disposicao de dejetos animais,2020,27.3151
+Uso em equipamento ou produto,2020,7.2703
+Aereo,2021,7.7094
+Agropecuaria,2021,20.6281
+Aplicacao de residuos organicos,2021,6.1809
+Cimento,2021,13.7611
+Corretivo agricola,2021,26.0049
+Cultivo em sistema irrigado inundado,2021,10.5653
+Deposicao de dejetos em pastagem,2021,62.6928
+Desmatamento,2021,1415.7357
+Disposicao em aterros controlados ou lixoes,2021,14.2598
+Disposicao final em aterros sanitarios,2021,46.3467
+Exploracao de petroleo e gas natural,2021,22.3028
+Ferro gusa e aco,2021,8.3889
+Fertilizantes sinteticos nitrogenados,2021,39.0446
+Geracao de eletricidade (servico publico),2021,57.8019
+Nao ferrosos e outros da metalurgia,2021,8.0839
+Outras industrias,2021,5.4826
+Outras mudancas de uso da terra,2021,18.6808
+Outros,2021,60.6037
+Processo de digestao de animais ruminantes,2021,382.5436
+Producao de cal,2021,6.1443
+Producao de cimento,2021,24.4355
+Producao de ferro gusa e aco,2021,46.5418
+Quimica,2021,13.7232
+Refino de petroleo,2021,25.6252
+Regeneracao,2021,19.668
+Residencial,2021,27.4321
+Residuos agricolas,2021,37.3224
+Rodoviario,2021,189.6568
+Tratamento e despejo de efluentes domesticos,2021,25.477
+Tratamento e disposicao de dejetos animais,2021,27.9748
+Uso em equipamento ou produto,2021,7.7209
+Aereo,2022,9.5494
+Agropecuaria,2022,21.2367
+Aplicacao de residuos organicos,2022,6.3864
+Cimento,2022,14.363
+Corretivo agricola,2022,27.1064
+Cultivo em sistema irrigado inundado,2022,10.4523
+Deposicao de dejetos em pastagem,2022,65.1276
+Desmatamento,2022,1487.9778
+Disposicao em aterros controlados ou lixoes,2022,13.6216
+Disposicao final em aterros sanitarios,2022,47.3187
+Exploracao de petroleo e gas natural,2022,22.5639
+Ferro gusa e aco,2022,8.0074
+Fertilizantes sinteticos nitrogenados,2022,37.3348
+Geracao de eletricidade (servico publico),2022,21.6917
+Nao ferrosos e outros da metalurgia,2022,7.6247
+Outras industrias,2022,6.6942
+Outras mudancas de uso da terra,2022,15.683
+Outros,2022,59.6192
+Processo de digestao de animais ruminantes,2022,399.1938
+Producao de cal,2022,6.1443
+Producao de cimento,2022,21.4522
+Producao de ferro gusa e aco,2022,43.9845
+Quimica,2022,13.7273
+Refino de petroleo,2022,25.6898
+Regeneracao,2022,18.045
+Residencial,2022,27.233
+Residuos agricolas,2022,38.0852
+Rodoviario,2022,200.6961
+Tratamento e despejo de efluentes domesticos,2022,24.1215
+Tratamento e disposicao de dejetos animais,2022,28.9195
+Uso em equipamento ou produto,2022,8.1715
+Aereo,2023,10.0393
+Agropecuaria,2023,22.5831
+Aplicacao de residuos organicos,2023,6.7789
+Cimento,2023,14.4134
+Corretivo agricola,2023,29.386
+Cultivo em sistema irrigado inundado,2023,9.2698
+Deposicao de dejetos em pastagem,2023,66.017
+Desmatamento,2023,1314.6741
+Disposicao em aterros controlados ou lixoes,2023,12.975
+Disposicao final em aterros sanitarios,2023,48.0972
+Exploracao de petroleo e gas natural,2023,24.2769
+Ferro gusa e aco,2023,7.621
+Fertilizantes sinteticos nitrogenados,2023,37.6365
+Geracao de eletricidade (servico publico),2023,19.6195
+Nao ferrosos e outros da metalurgia,2023,7.5576
+Outras industrias,2023,6.093
+Outras mudancas de uso da terra,2023,12.3139
+Outros,2023,58.4306
+Processo de digestao de animais ruminantes,2023,405.0907
+Producao de cal,2023,6.1443
+Producao de cimento,2023,24.1396
+Producao de ferro gusa e aco,2023,41.3278
+Quimica,2023,12.5277
+Refino de petroleo,2023,26.3911
+Regeneracao,2023,13.9573
+Residencial,2023,27.0869
+Residuos agricolas,2023,42.8969
+Rodoviario,2023,206.9818
+Tratamento e despejo de efluentes domesticos,2023,24.0792
+Tratamento e disposicao de dejetos animais,2023,28.7834
+Uso em equipamento ou produto,2023,8.6221
+Aereo,2024,10.268
+Agropecuaria,2024,22.5603
+Aplicacao de residuos organicos,2024,6.8134
+Cimento,2024,15.2005
+Corretivo agricola,2024,28.4278
+Cultivo em sistema irrigado inundado,2024,10.0229
+Deposicao de dejetos em pastagem,2024,65.5948
+Desmatamento,2024,887.0523
+Disposicao em aterros controlados ou lixoes,2024,12.3832
+Disposicao final em aterros sanitarios,2024,50.7063
+Exploracao de petroleo e gas natural,2024,24.4901
+Ferro gusa e aco,2024,8.0561
+Fertilizantes sinteticos nitrogenados,2024,36.5503
+Geracao de eletricidade (servico publico),2024,26.3907
+Nao ferrosos e outros da metalurgia,2024,7.1469
+Outras industrias,2024,6.2334
+Outras mudancas de uso da terra,2024,8.9342
+Outros,2024,58.959
+Processo de digestao de animais ruminantes,2024,403.9974
+Producao de cal,2024,6.1443
+Producao de cimento,2024,23.5047
+Producao de ferro gusa e aco,2024,43.7148
+Quimica,2024,12.3839
+Refino de petroleo,2024,25.1157
+Regeneracao,2024,9.6205
+Residencial,2024,26.7916
+Residuos agricolas,2024,40.6542
+Rodoviario,2024,204.076
+Tratamento e despejo de efluentes domesticos,2024,25.1775
+Tratamento e disposicao de dejetos animais,2024,29.1822
+Uso em equipamento ou produto,2024,9.0727

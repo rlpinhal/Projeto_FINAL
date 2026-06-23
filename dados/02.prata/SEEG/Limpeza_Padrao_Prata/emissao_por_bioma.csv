@@ -1,0 +1,169 @@
+categoria,ano,emissao_mt
+Amazonia,2000,1226.0
+Caatinga,2000,97.0
+Cerrado,2000,454.0
+Mata Atlantica,2000,389.0
+Nao Alocado,2000,285.0
+Pampa,2000,59.0
+Pantanal,2000,18.0
+Amazonia,2001,1361.0
+Caatinga,2001,95.0
+Cerrado,2001,419.0
+Mata Atlantica,2001,363.0
+Nao Alocado,2001,290.0
+Pampa,2001,60.0
+Pantanal,2001,19.0
+Amazonia,2002,1470.0
+Caatinga,2002,96.0
+Cerrado,2002,422.0
+Mata Atlantica,2002,370.0
+Nao Alocado,2002,293.0
+Pampa,2002,59.0
+Pantanal,2002,19.0
+Amazonia,2003,1987.0
+Caatinga,2003,94.0
+Cerrado,2003,487.0
+Mata Atlantica,2003,380.0
+Nao Alocado,2003,288.0
+Pampa,2003,67.0
+Pantanal,2003,26.0
+Amazonia,2004,1875.0
+Caatinga,2004,99.0
+Cerrado,2004,507.0
+Mata Atlantica,2004,383.0
+Nao Alocado,2004,304.0
+Pampa,2004,69.0
+Pantanal,2004,21.0
+Amazonia,2005,1580.0
+Caatinga,2005,97.0
+Cerrado,2005,437.0
+Mata Atlantica,2005,373.0
+Nao Alocado,2005,304.0
+Pampa,2005,59.0
+Pantanal,2005,20.0
+Amazonia,2006,1262.0
+Caatinga,2006,98.0
+Cerrado,2006,389.0
+Mata Atlantica,2006,370.0
+Nao Alocado,2006,308.0
+Pampa,2006,57.0
+Pantanal,2006,18.0
+Amazonia,2007,1067.0
+Caatinga,2007,103.0
+Cerrado,2007,401.0
+Mata Atlantica,2007,464.0
+Nao Alocado,2007,142.0
+Pampa,2007,60.0
+Pantanal,2007,15.0
+Amazonia,2008,1026.0
+Caatinga,2008,106.0
+Cerrado,2008,421.0
+Mata Atlantica,2008,479.0
+Nao Alocado,2008,147.0
+Pampa,2008,66.0
+Pantanal,2008,16.0
+Amazonia,2009,696.0
+Caatinga,2009,105.0
+Cerrado,2009,396.0
+Mata Atlantica,2009,463.0
+Nao Alocado,2009,133.0
+Pampa,2009,63.0
+Pantanal,2009,16.0
+Amazonia,2010,656.0
+Caatinga,2010,105.0
+Cerrado,2010,395.0
+Mata Atlantica,2010,504.0
+Nao Alocado,2010,130.0
+Pampa,2010,71.0
+Pantanal,2010,15.0
+Amazonia,2011,689.0
+Caatinga,2011,111.0
+Cerrado,2011,399.0
+Mata Atlantica,2011,499.0
+Nao Alocado,2011,139.0
+Pampa,2011,74.0
+Pantanal,2011,14.0
+Amazonia,2012,678.0
+Caatinga,2012,112.0
+Cerrado,2012,470.0
+Mata Atlantica,2012,542.0
+Nao Alocado,2012,119.0
+Pampa,2012,75.0
+Pantanal,2012,14.0
+Amazonia,2013,770.0
+Caatinga,2013,117.0
+Cerrado,2013,505.0
+Mata Atlantica,2013,580.0
+Nao Alocado,2013,120.0
+Pampa,2013,82.0
+Pantanal,2013,15.0
+Amazonia,2014,760.0
+Caatinga,2014,119.0
+Cerrado,2014,477.0
+Mata Atlantica,2014,570.0
+Nao Alocado,2014,127.0
+Pampa,2014,75.0
+Pantanal,2014,14.0
+Amazonia,2015,896.0
+Caatinga,2015,120.0
+Cerrado,2015,470.0
+Mata Atlantica,2015,559.0
+Nao Alocado,2015,120.0
+Pampa,2015,78.0
+Pantanal,2015,14.0
+Amazonia,2016,941.0
+Caatinga,2016,113.0
+Cerrado,2016,435.0
+Mata Atlantica,2016,537.0
+Nao Alocado,2016,111.0
+Pampa,2016,71.0
+Pantanal,2016,16.0
+Amazonia,2017,810.0
+Caatinga,2017,113.0
+Cerrado,2017,431.0
+Mata Atlantica,2017,553.0
+Nao Alocado,2017,112.0
+Pampa,2017,72.0
+Pantanal,2017,15.0
+Amazonia,2018,837.0
+Caatinga,2018,112.0
+Cerrado,2018,423.0
+Mata Atlantica,2018,532.0
+Nao Alocado,2018,117.0
+Pampa,2018,69.0
+Pantanal,2018,15.0
+Amazonia,2019,1179.0
+Caatinga,2019,115.0
+Cerrado,2019,472.0
+Mata Atlantica,2019,535.0
+Nao Alocado,2019,112.0
+Pampa,2019,75.0
+Pantanal,2019,18.0
+Amazonia,2020,1147.0
+Caatinga,2020,115.0
+Cerrado,2020,505.0
+Mata Atlantica,2020,523.0
+Nao Alocado,2020,104.0
+Pampa,2020,66.0
+Pantanal,2020,19.0
+Amazonia,2021,1280.0
+Caatinga,2021,131.0
+Cerrado,2021,491.0
+Mata Atlantica,2021,561.0
+Nao Alocado,2021,114.0
+Pampa,2021,80.0
+Pantanal,2021,20.0
+Amazonia,2022,1352.0
+Caatinga,2022,134.0
+Cerrado,2022,500.0
+Mata Atlantica,2022,544.0
+Nao Alocado,2022,119.0
+Pampa,2022,70.0
+Pantanal,2022,19.0
+Amazonia,2023,1123.0
+Caatinga,2023,145.0
+Cerrado,2023,573.0
+Mata Atlantica,2023,532.0
+Nao Alocado,2023,113.0
+Pampa,2023,65.0
+Pantanal,2023,26.0
