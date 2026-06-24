@@ -533,7 +533,7 @@ elif page == "Uso da Terra & Risco":
     col1.metric("Emissões por Desmatamento", f"{emis_desm/1e9:,.1f} Bi tCO₂e", help="Total de emissões da classe Mudança de Uso da Terra e Floresta no período selecionado.")
     col2.metric("Variação Área Floresta", f"{area_flor_max/1e6:,.2f} Mi ha", delta=f"{pct_flor:+.2f}%", help=f"Tamanho da área de Floresta em {ano_max_cob} comparado com {ano_min_cob}.")
     col3.metric("Variação Área Agropecuária", f"{area_agro_max/1e6:,.2f} Mi ha", delta=f"{pct_agro:+.2f}%", delta_color="inverse", help=f"Tamanho da área Agropecuária (Pastagem+Agricultura) em {ano_max_cob} comparado com {ano_min_cob}. (Crescimento é marcado vermelho no contexto de desmatamento)")
-    col4.metric("Desmatamento TI / UC", f"{area_desm_ti_uc/1e9:,.1f} Bi ha", help="Soma total da área desmatada em Terras Indígenas e Unidades de Conservação.")
+    col4.metric("Desmatamento TI / UC", f"{area_desm_ti_uc/1000:,.1f} mil ha", help="Soma total da área desmatada em Terras Indígenas e Unidades de Conservação.")
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     c1, spacer, c2 = st.columns([1, 0.05, 1])
