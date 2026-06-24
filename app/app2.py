@@ -77,7 +77,7 @@ def load_data():
     base_dir = os.path.join(project_root, "dados", "02.prata")
     
     # 1. Crop Yield
-    df_crop = pd.read_csv(os.path.join(base_dir, "kaggle_crop_yield", "crop_yield_silver.csv"))
+    df_crop = pd.read_parquet(os.path.join(base_dir, "kaggle_crop_yield", "crop_yield_silver.parquet"))
     # 2. Cobertura Brasil
     df_cob = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_cobertura_brasil_nivel1.csv"))
     # 3. Desmatamento Estado/Bioma
@@ -85,7 +85,7 @@ def load_data():
     # 4. Desmatamento Geral
     df_desm = pd.read_parquet(os.path.join(base_dir, "mapbiomas", "prata_desmatamento.parquet"))
     # 5. Pastagem
-    df_past = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_pastagem.csv"), low_memory=False)
+    df_past = pd.read_parquet(os.path.join(base_dir, "mapbiomas", "prata_pastagem.parquet"))
     # 6. Chuva NASA
     df_chuva = pd.read_csv(os.path.join(base_dir, "nasa", "prata_nasa_chuva_estados_brasil.csv"), sep=';')
     # 7. SEEG
