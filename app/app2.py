@@ -244,9 +244,11 @@ if page == "Visão Executiva":
     # 3. Área Desmatada (bruta em hectares)
     tot_desmatamento = s_desm[s_desm['origem_dados'] == 'fato_desmatamento_estado']['area_ha'].sum()
     
-    # 4. Oportunidade Créditos (Reais brutos)
+    # 4. Oportunidade Créditos (Reais brutos) — Usa somente o último ano para evitar dupla contagem de área
     df_vigor = s_past[s_past['origem_dados'] == 'fato_pastagem_vigor']
-    pastagem_deg = df_vigor[df_vigor['classe_nivel_2'].isin(['Vigor Condition Low', 'Vigor Condition Average'])]['area_ha'].sum()
+    ano_max_vigor = df_vigor['ano'].max() if len(df_vigor) > 0 else 0
+    vigor_ultimo_ano = df_vigor[df_vigor['ano'] == ano_max_vigor]
+    pastagem_deg = vigor_ultimo_ano[vigor_ultimo_ano['classe_nivel_2'].isin(['Vigor Condition Low', 'Vigor Condition Average'])]['area_ha'].sum()
     receita_carbono = pastagem_deg * 2.0 * 50
     
     col1.metric("Emissões Líquidas", formatar_numero(tot_emissoes_brutas, "tCO₂e"), help="Total de emissões líquidas considerando todos os setores na seleção atual.")
@@ -528,10 +530,10 @@ elif page == "Uso da Terra & Risco":
     area_desm_ti_uc = s_desm[s_desm['origem_dados'].isin(['fato_desmatamento_terra_indigena', 'fato_desmatamento_unidade_conservacao'])]['area_ha'].sum()
 
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Emissões por Desmatamento", f"{emis_desm/1e6:,.1f} Mi tCO₂e", help="Total de emissões da classe Mudança de Uso da Terra e Floresta no período selecionado.")
+    col1.metric("Emissões por Desmatamento", f"{emis_desm/1e9:,.1f} Bi tCO₂e", help="Total de emissões da classe Mudança de Uso da Terra e Floresta no período selecionado.")
     col2.metric("Variação Área Floresta", f"{area_flor_max/1e6:,.2f} Mi ha", delta=f"{pct_flor:+.2f}%", help=f"Tamanho da área de Floresta em {ano_max_cob} comparado com {ano_min_cob}.")
     col3.metric("Variação Área Agropecuária", f"{area_agro_max/1e6:,.2f} Mi ha", delta=f"{pct_agro:+.2f}%", delta_color="inverse", help=f"Tamanho da área Agropecuária (Pastagem+Agricultura) em {ano_max_cob} comparado com {ano_min_cob}. (Crescimento é marcado vermelho no contexto de desmatamento)")
-    col4.metric("Desmatamento TI / UC", f"{area_desm_ti_uc/1000:,.1f} mil ha", help="Soma total da área desmatada em Terras Indígenas e Unidades de Conservação.")
+    col4.metric("Desmatamento TI / UC", f"{area_desm_ti_uc/1e9:,.1f} Bi ha", help="Soma total da área desmatada em Terras Indígenas e Unidades de Conservação.")
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     c1, spacer, c2 = st.columns([1, 0.05, 1])
@@ -686,9 +688,15 @@ elif page == "Pastagens & Carbono":
         
         # Intensidade de Carbono sobre Pastagem
         # Usamos s_past em vez de s_cob pois a base de cobertura nível 1 agregada nacionalmente não possui campo "estado"
+        # Excluímos emissões de "Cultivo em sistema irrigado inundado" (arroz) pois não correspondem à área de pastagem
+        emis_agro_sem_arroz = s_seeg[
+            (s_seeg['setor_nivel1'] == 'Agropecuária') & 
+            (s_seeg['ano'] == ano_max) & 
+            (s_seeg['setor_nivel3'] != 'Cultivo em sistema irrigado inundado')
+        ].groupby('estado')['emissao_liquida_toneladas'].sum().reset_index()
         past_estado = s_past[s_past['ano'] == ano_max].groupby('estado')['area_ha'].sum().reset_index()
         past_estado.rename(columns={'area_ha': 'area_pastagem_total'}, inplace=True)
-        df_int = pd.merge(emis_agro_estado, past_estado, on='estado', how='inner')
+        df_int = pd.merge(emis_agro_sem_arroz, past_estado, on='estado', how='inner')
         if len(df_int) > 0:
             df_int['Intensidade_Carbono'] = df_int['emissao_liquida_toneladas'] / df_int['area_pastagem_total']
             df_int = df_int.sort_values('Intensidade_Carbono', ascending=False)
