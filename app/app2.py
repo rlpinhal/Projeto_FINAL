@@ -83,7 +83,7 @@ def load_data():
     # 3. Desmatamento Estado/Bioma
     df_desm_est = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_desmatamento_estado_bioma.csv"))
     # 4. Desmatamento Geral
-    df_desm = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_desmatamento.csv"))
+    df_desm = pd.read_parquet(os.path.join(base_dir, "mapbiomas", "prata_desmatamento.parquet"))
     # 5. Pastagem
     df_past = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_pastagem.csv"))
     # 6. Chuva NASA
