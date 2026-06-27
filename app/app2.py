@@ -256,8 +256,17 @@ if page == "Visão Executiva":
     col3.metric("Área Desmatada", formatar_numero(tot_desmatamento, "ha"), help="Área total desmatada bruta em hectares (inclui sobreposição de alertas dependendo do filtro).")
     col4.metric("Potencial Carbono", f"R$ {formatar_numero(receita_carbono)}", help="Estimativa financeira baseada na precificação da recuperação de hectares de pastagens com vigor baixo/médio.")
     
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("💡 Insight: Visão Executiva"):
+        st.markdown("""
+        <div style="background-color: #004D20; padding: 20px; border-radius: 10px; color: white;">
+            <strong>Contexto de Mercado de Carbono</strong><br>
+            <i>Escreva aqui o seu insight sobre o panorama geral das emissões e as oportunidades no mercado de carbono...</i>
+        </div>
+        """, unsafe_allow_html=True)
+    
     # Mais espaço entre os gráficos
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
     
     c1, spacer, c2 = st.columns([1, 0.05, 1])
     
@@ -399,7 +408,16 @@ elif page == "Emissões & Clima":
     col3.metric("Maior Precipitação", estado_mais_chuva, help="Estado com o maior volume acumulado de chuvas no período.")
     col4.metric("Menor Precipitação", estado_menos_chuva, help="Estado com o menor volume acumulado de chuvas no período.")
     
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("💡 Insight: Emissões & Clima"):
+        st.markdown("""
+        <div style="background-color: #004D20; padding: 20px; border-radius: 10px; color: white;">
+            <strong>Contexto de Mercado de Carbono</strong><br>
+            <i>Escreva aqui o seu insight sobre como as mudanças climáticas e as chuvas impactam a agropecuária e os projetos de carbono...</i>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    st.markdown("<br>", unsafe_allow_html=True)
     c1, spacer, c2 = st.columns([1, 0.05, 1])
     
     with c1:
@@ -535,7 +553,16 @@ elif page == "Uso da Terra & Risco":
     col3.metric("Variação Área Agropecuária", f"{area_agro_max/1e6:,.2f} Mi ha", delta=f"{pct_agro:+.2f}%", delta_color="inverse", help=f"Tamanho da área Agropecuária (Pastagem+Agricultura) em {ano_max_cob} comparado com {ano_min_cob}. (Crescimento é marcado vermelho no contexto de desmatamento)")
     col4.metric("Desmatamento TI / UC", f"{area_desm_ti_uc/1000:,.1f} mil ha", help="Soma total da área desmatada em Terras Indígenas e Unidades de Conservação.")
 
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("💡 Insight: Uso da Terra & Risco"):
+        st.markdown("""
+        <div style="background-color: #004D20; padding: 20px; border-radius: 10px; color: white;">
+            <strong>Contexto de Mercado de Carbono</strong><br>
+            <i>Escreva aqui o seu insight sobre o risco de desmatamento, leis como EUDR e como isso afeta a elegibilidade para créditos de carbono...</i>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
     c1, spacer, c2 = st.columns([1, 0.05, 1])
     
     with c1:
@@ -628,7 +655,16 @@ elif page == "Pastagens & Carbono":
         help_receita = f"Receita Base: R$ 50/tCO₂e.\nCenário Mínimo (R$ 25/t): R$ {receita_min/1e9:,.2f} Bi\nCenário Máximo (R$ 150/t): R$ {receita_max/1e9:,.2f} Bi"
         col4.metric("Receita de Carbono (Base)", f"R$ {receita_base/1e9:,.2f} Bi", help=help_receita)
 
-        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+        with st.expander("💡 Insight: Pastagens & Carbono"):
+            st.markdown("""
+            <div style="background-color: #004D20; padding: 20px; border-radius: 10px; color: white;">
+                <strong>Contexto de Mercado de Carbono</strong><br>
+                <i>Escreva aqui o seu insight sobre a oportunidade financeira gigantesca na recuperação de pastagens degradadas para sequestro de carbono...</i>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
         
         # Preparação de Dados por Estado
         df_vigor_estado = vigor_recente.groupby(['estado', 'classe_nivel_2'])['area_ha'].sum().reset_index()
