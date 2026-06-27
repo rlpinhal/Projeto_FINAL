@@ -331,7 +331,7 @@ if page == "Visão Executiva":
                 <i>Insira aqui o seu insight sobre este gráfico...</i>
             </div>
             ''', unsafe_allow_html=True)
-        st.plotly_chart(fig_cols, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+        st.plotly_chart(fig_cols, use_container_width=True, config={'displayModeBar': False})
 
     with c2:
         # Gráfico de Área Empilhada: Evolução Histórica (Movido para cima)
@@ -363,7 +363,7 @@ if page == "Visão Executiva":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_area, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_area, use_container_width=True, config={'displayModeBar': False})
 
     # --- GRÁFICOS INFERIORES: Subcategoria e Mapa ---
     st.markdown("<br><br>", unsafe_allow_html=True)
@@ -393,7 +393,7 @@ if page == "Visão Executiva":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_sub, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_sub, use_container_width=True, config={'displayModeBar': False})
             
     with c4:
         # Mapa Coroplético de Emissões (Movido para baixo)
@@ -420,7 +420,7 @@ if page == "Visão Executiva":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_map, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_map, use_container_width=True, config={'displayModeBar': False})
 
 # ==============================================================================
 # PÁGINA 2: EMISSÕES & CLIMA
@@ -514,7 +514,7 @@ elif page == "Emissões & Clima":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_dual, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_dual, use_container_width=True, config={'displayModeBar': False})
             
     with c2:
         chuva_anual_est = s_chuva.groupby(['estado', 'ano'])['Chuva_mm'].sum().reset_index()
@@ -576,7 +576,7 @@ elif page == "Emissões & Clima":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_area_agro, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_area_agro, use_container_width=True, config={'displayModeBar': False})
         else:
             st.info("Não há dados de emissões para o setor Agropecuária nesta seleção.")
 
@@ -604,7 +604,7 @@ elif page == "Emissões & Clima":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_map_chuva, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_map_chuva, use_container_width=True, config={'displayModeBar': False})
         else:
             st.info("Sem dados de chuva para o mapa.")
 
@@ -691,7 +691,7 @@ elif page == "Uso da Terra & Risco":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_bar_comp, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_bar_comp, use_container_width=True, config={'displayModeBar': False})
             
     with c2:
         # Alarme EUDR - Agora em Gráfico de Área
@@ -719,7 +719,7 @@ elif page == "Uso da Terra & Risco":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_eudr, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_eudr, use_container_width=True, config={'displayModeBar': False})
         else:
             st.success("Zero desmatamento em TI/UC para esta seleção.")
 
@@ -812,7 +812,7 @@ elif page == "Pastagens & Carbono":
                         <i>Insira aqui o seu insight sobre este gráfico...</i>
                     </div>
                     ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_map_deg, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+                st.plotly_chart(fig_map_deg, use_container_width=True, config={'displayModeBar': False})
                 
         with c2:
             emis_agro_estado = s_seeg[(s_seeg['setor_nivel1'] == 'Agropecuária') & (s_seeg['ano'] == ano_max)].groupby('estado')['emissao_liquida_toneladas'].sum().reset_index()
@@ -838,7 +838,7 @@ elif page == "Pastagens & Carbono":
                         <i>Insira aqui o seu insight sobre este gráfico...</i>
                     </div>
                     ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_scatter, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+                st.plotly_chart(fig_scatter, use_container_width=True, config={'displayModeBar': False})
 
         st.markdown("<br><br>", unsafe_allow_html=True)
         
@@ -872,7 +872,7 @@ elif page == "Pastagens & Carbono":
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_int, use_container_width=True, config={'displayModeBar': False}, config={'displayModeBar': False})
+            st.plotly_chart(fig_int, use_container_width=True, config={'displayModeBar': False})
             
     else:
         st.info("Sem dados de pastagem para esta seleção.")
