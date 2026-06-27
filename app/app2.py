@@ -76,20 +76,20 @@ def load_data():
     project_root = os.path.dirname(current_dir)
     base_dir = os.path.join(project_root, "dados", "02.prata")
     
-    # 1. Crop Yield
-    df_crop = pd.read_parquet(os.path.join(base_dir, "kaggle_crop_yield", "crop_yield_silver.parquet"))
-    # 2. Cobertura Brasil
+    # 1. Cobertura Brasil
     df_cob = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_cobertura_brasil_nivel1.csv"))
-    # 3. Desmatamento Estado/Bioma
+    # 2. Desmatamento Estado/Bioma
     df_desm_est = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_desmatamento_estado_bioma.csv"))
-    # 4. Desmatamento Geral
-    df_desm = pd.read_parquet(os.path.join(base_dir, "mapbiomas", "prata_desmatamento.parquet"))
-    # 5. Pastagem
+    # 3. Desmatamento Geral (apenas colunas usadas)
+    desm_cols = ['nome_estado', 'ano', 'area_ha', 'origem_dados']
+    df_desm = pd.read_parquet(os.path.join(base_dir, "mapbiomas", "prata_desmatamento.parquet"), columns=desm_cols)
+    # 4. Pastagem
     df_past = pd.read_parquet(os.path.join(base_dir, "mapbiomas", "prata_pastagem.parquet"))
-    # 6. Chuva NASA
+    # 5. Chuva NASA
     df_chuva = pd.read_csv(os.path.join(base_dir, "nasa", "prata_nasa_chuva_estados_brasil.csv"), sep=';')
-    # 7. SEEG
-    df_seeg = pd.read_parquet(os.path.join(base_dir, "SEEG", "prata_seeg_all.parquet"))
+    # 6. SEEG (apenas colunas usadas para economizar memória)
+    seeg_cols = ['ano', 'estado', 'bioma', 'setor_nivel1', 'setor_nivel2', 'setor_nivel3', 'emissao_liquida_toneladas']
+    df_seeg = pd.read_parquet(os.path.join(base_dir, "SEEG", "prata_seeg_all.parquet"), columns=seeg_cols)
     
     # Dicionário de UFs (Pedido do Usuário)
     mapa_uf = {
@@ -104,20 +104,20 @@ def load_data():
     
     # Padronizar NASA
     df_chuva['ano'] = df_chuva['Ano']
-    df_chuva['estado'] = df_chuva['UF'].map(mapa_uf).str.title()
+    df_chuva['estado'] = df_chuva['UF'].map(mapa_uf)
     
-    # Padronizar nomes nas bases (Title Case)
+    # Padronizar nomes nas bases e remover espaços/quebras de linha
     if 'nome_estado' in df_past.columns:
-        df_past['estado'] = df_past['nome_estado'].str.title()
+        df_past['estado'] = df_past['nome_estado'].str.strip()
     if 'nome_estado' in df_desm.columns:
-        df_desm['estado'] = df_desm['nome_estado'].str.title()
+        df_desm['estado'] = df_desm['nome_estado'].str.strip()
     if 'estado' in df_seeg.columns:
-        df_seeg['estado'] = df_seeg['estado'].str.title()
+        df_seeg['estado'] = df_seeg['estado'].str.strip()
         
-    return df_crop, df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg
+    return df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg
 
 with st.spinner("Carregando Camada Silver..."):
-    df_crop, df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg = load_data()
+    df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg = load_data()
 
 @st.cache_data
 def load_geojson():

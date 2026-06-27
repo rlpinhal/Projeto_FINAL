@@ -104,15 +104,15 @@ def load_data():
     
     # Padronizar NASA
     df_chuva['ano'] = df_chuva['Ano']
-    df_chuva['estado'] = df_chuva['UF'].map(mapa_uf).str.title()
+    df_chuva['estado'] = df_chuva['UF'].map(mapa_uf)
     
-    # Padronizar nomes nas bases (Title Case)
+    # Padronizar nomes nas bases e remover espaços/quebras de linha
     if 'nome_estado' in df_past.columns:
-        df_past['estado'] = df_past['nome_estado'].str.title()
+        df_past['estado'] = df_past['nome_estado'].str.strip()
     if 'nome_estado' in df_desm.columns:
-        df_desm['estado'] = df_desm['nome_estado'].str.title()
+        df_desm['estado'] = df_desm['nome_estado'].str.strip()
     if 'estado' in df_seeg.columns:
-        df_seeg['estado'] = df_seeg['estado'].str.title()
+        df_seeg['estado'] = df_seeg['estado'].str.strip()
         
     return df_crop, df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg
 
