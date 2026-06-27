@@ -239,7 +239,7 @@ if page == "Visão Executiva":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    with st.expander("💡 Insight: Visão Executiva"):
+    with st.expander("💡 Insight: Visão Executiva", expanded=True):
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
@@ -312,8 +312,8 @@ if page == "Visão Executiva":
             labels={'setor_nivel1': 'Setor', 'emissao_liquida_toneladas': 'Emissões (tCO₂e)'}
         )
         fig_cols.update_traces(marker_color='#007A33')
-        fig_cols.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-        with st.expander("💡 Insights (Cols)"):
+        fig_cols.update_layout(xaxis_title="", height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+        with st.expander("💡 Insights (Cols)", expanded=True):
             st.markdown('''
             <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                 <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -341,11 +341,11 @@ if page == "Visão Executiva":
                     'Energia': '#2C3E50'
                 }
             )
-            fig_area.update_layout(
+            fig_area.update_layout(xaxis_title="", 
                 height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Area)"):
+            with st.expander("💡 Insights (Area)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -374,8 +374,8 @@ if page == "Visão Executiva":
                 labels={'emissao_liquida_toneladas': 'Emissões (tCO₂e)', 'setor_nivel3': 'Subcategoria'}
             )
             fig_sub.update_traces(marker_color='#007A33') 
-            fig_sub.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Sub)"):
+            fig_sub.update_layout(xaxis_title="", height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+            with st.expander("💡 Insights (Sub)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -398,11 +398,11 @@ if page == "Visão Executiva":
                 labels={'emissao_liquida_toneladas': 'Emissões (tCO₂e)'}
             )
             fig_map.update_geos(fitbounds="locations", visible=False)
-            fig_map.update_layout(
+            fig_map.update_layout(xaxis_title="", 
                 height=450, margin={"r":0,"t":25,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Map)"):
+            with st.expander("💡 Insights (Map)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -419,7 +419,7 @@ elif page == "Emissões & Clima":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    with st.expander("💡 Insight: Emissões & Clima"):
+    with st.expander("💡 Insight: Emissões & Clima", expanded=True):
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
@@ -427,6 +427,24 @@ elif page == "Emissões & Clima":
         </div>
         """, unsafe_allow_html=True)
     
+
+    # --- LÓGICA DE FILTRO INTERATIVO DO TREEMAP ---
+    selected_state = None
+    if "tree_selection" in st.session_state:
+        sel = st.session_state["tree_selection"]
+        if sel and "selection" in sel and "points" in sel["selection"] and len(sel["selection"]["points"]) > 0:
+            pt = sel["selection"]["points"][0]
+            if "label" in pt and pt["label"] not in ["H0 Rejeitada (Sem Relação)", "H0 Não Rejeitada (Com Relação)"]:
+                selected_state = pt["label"]
+                st.info(f"Filtro interativo ativado: Mostrando dados apenas para **{selected_state}**")
+
+    # Copiamos os dataframes originais para não afetar o fig_tree, mas filtramos para o resto
+    s_chuva_filt = s_chuva.copy()
+    s_seeg_filt = s_seeg.copy()
+    if selected_state:
+        s_chuva_filt = s_chuva_filt[s_chuva_filt['estado'] == selected_state]
+        s_seeg_filt = s_seeg_filt[s_seeg_filt['estado'] == selected_state]
+        
     # 1. Preparação dos dados para métricas
     import scipy.stats as stats
     
@@ -492,11 +510,11 @@ elif page == "Emissões & Clima":
                 go.Scatter(x=df_ano['ano'], y=df_ano['emissao_liquida_toneladas'], name="Emissões Líquidas", line=dict(color="#DC2626", width=3)),
                 secondary_y=True,
             )
-            fig_dual.update_layout(
+            fig_dual.update_layout(xaxis_title="", 
                 title="Chuva Média Anual vs Emissões", paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80), height=400,
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Dual)"):
+            with st.expander("💡 Insights (Dual)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -529,14 +547,14 @@ elif page == "Emissões & Clima":
                 title="Status do Teste de Hipótese por Estado"
             )
             fig_tree.update_traces(textfont=dict(color='white'))
-            fig_tree.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Tree)"):
+            fig_tree.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+            with st.expander("💡 Insights (Tree)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_tree, use_container_width=True)
+            st.plotly_chart(fig_tree, use_container_width=True, on_select="rerun", key="tree_selection")
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     c3, spacer2, c4 = st.columns([1, 0.05, 1])
@@ -554,11 +572,11 @@ elif page == "Emissões & Clima":
                 title="Evolução Emissões Agropecuárias (Subsetor)",
                 labels={'ano': 'Ano', 'emissao_liquida_toneladas': 'Emissões Líquidas (tCO₂e)', 'setor_nivel2': 'Subsetor'}
             )
-            fig_area_agro.update_layout(
+            fig_area_agro.update_layout(xaxis_title="", 
                 height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Area Agro)"):
+            with st.expander("💡 Insights (Area Agro)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -582,11 +600,11 @@ elif page == "Emissões & Clima":
                 labels={'Chuva_mm': 'Precipitação (mm)'}
             )
             fig_map_chuva.update_geos(fitbounds="locations", visible=False)
-            fig_map_chuva.update_layout(
+            fig_map_chuva.update_layout(xaxis_title="", 
                 height=400, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Map Chuva)"):
+            with st.expander("💡 Insights (Map Chuva)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -604,7 +622,7 @@ elif page == "Uso da Terra & Risco":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    with st.expander("💡 Insight: Uso da Terra & Risco"):
+    with st.expander("💡 Insight: Uso da Terra & Risco", expanded=True):
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
@@ -672,8 +690,8 @@ elif page == "Uso da Terra & Risco":
                 color_discrete_sequence=["#95A5A6", "#E74C3C"], # Cinza para ano inicial, Vermelho para final
                 labels={'Classe': 'Uso do Solo', 'area_ha': 'Área (Mi ha)', 'ano': 'Ano'}
             )
-            fig_bar_comp.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Bar Comp)"):
+            fig_bar_comp.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+            with st.expander("💡 Insights (Bar Comp)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -700,8 +718,8 @@ elif page == "Uso da Terra & Risco":
                 title="Alerta EUDR: Desmatamento em Áreas Protegidas",
                 labels={'ano': 'Ano', 'area_ha': 'Área Desmatada (ha)', 'origem_dados': 'Local'}
             )
-            fig_eudr.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Eudr)"):
+            fig_eudr.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+            with st.expander("💡 Insights (Eudr)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -719,7 +737,7 @@ elif page == "Pastagens & Carbono":
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    with st.expander("💡 Insight: Pastagens & Carbono"):
+    with st.expander("💡 Insight: Pastagens & Carbono", expanded=True):
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
@@ -790,11 +808,11 @@ elif page == "Pastagens & Carbono":
                     labels={'Pct_Degradada': '% Degradada', 'Potencial_Receita_Base_R$': 'Receita (R$)'}
                 )
                 fig_map_deg.update_geos(fitbounds="locations", visible=False)
-                fig_map_deg.update_layout(
+                fig_map_deg.update_layout(xaxis_title="", 
                     height=450, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                     coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
                 )
-                with st.expander("💡 Insights (Map Deg)"):
+                with st.expander("💡 Insights (Map Deg)", expanded=True):
                     st.markdown('''
                     <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                         <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -819,8 +837,8 @@ elif page == "Pastagens & Carbono":
                     labels={'emissao_liquida_toneladas': 'Emissões Agropecuárias (tCO₂e)', 'Area_Degradada': 'Área Degradada (ha)'}
                 )
                 fig_scatter.update_traces(textposition='top center')
-                fig_scatter.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-                with st.expander("💡 Insights (Scatter)"):
+                fig_scatter.update_layout(xaxis_title="", height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+                with st.expander("💡 Insights (Scatter)", expanded=True):
                     st.markdown('''
                     <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                         <i>Insira aqui o seu insight sobre este gráfico...</i>
@@ -853,8 +871,8 @@ elif page == "Pastagens & Carbono":
                 labels={'estado': 'Estado', 'Intensidade_Carbono': 'tCO₂e / ha'}
             )
             fig_int.update_traces(marker_color='#1B4332')
-            fig_int.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Int)"):
+            fig_int.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+            with st.expander("💡 Insights (Int)", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
