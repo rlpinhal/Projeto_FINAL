@@ -729,9 +729,9 @@ elif page == "Pastagens & Carbono":
     st.header("Mercado de Carbono e Recuperação de Pastagens")
     st.markdown("<br>", unsafe_allow_html=True)
 
-        st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
     with st.expander("💡 Insight: Pastagens & Carbono"):
-            st.markdown("""
+        st.markdown("""
         <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
             <i>Escreva aqui o seu insight sobre a oportunidade financeira gigantesca na recuperação de pastagens degradadas para sequestro de carbono...</i>
