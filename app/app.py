@@ -17,45 +17,33 @@ st.markdown("""
     :root {
         --primary-green: #007A33;
         --bg-color: #F4F7F6;
-        --card-bg: #FFFFFF;
-        --text-main: #004D20;
-        --text-label: #7F8C8D;
-        --shadow-color: rgba(0,0,0,0.05);
     }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --primary-green: #4CAF50;
-            --bg-color: #121212;
-            --card-bg: #1E1E1E;
-            --text-main: #E0E0E0;
-            --text-label: #A0A0A0;
-            --shadow-color: rgba(0,0,0,0.5);
-        }
-    }
-
     html, body, [class*="css"], .stApp {
         font-family: 'Inter', sans-serif !important;
     }
     body, .stApp {
-        background-color: transparent !important;
+        background-color: #F4F7F6;
     }
     h1, h2, h3, h4 {
-        color: var(--text-main) !important;
+        color: #004D20 !important;
         font-family: 'Inter', sans-serif;
+    }
+    /* Sidebar Background */
+    [data-testid="stSidebar"] {
+        background-color: #FFFFFF !important;
     }
     /* Labels for filters and titles */
     label, .st-emotion-cache-1yvjcxr label, div[data-testid="stWidgetLabel"] p {
-        color: var(--text-label) !important;
+        color: #7F8C8D !important;
         font-weight: 500;
     }
-    /* Metric Cards */
+    /* Metric Cards - Forçando fundo branco e mesmo tamanho */
     [data-testid="stMetric"] {
-        background-color: var(--card-bg) !important;
+        background-color: #FFFFFF !important;
         border-radius: 15px !important;
         padding: 15px !important;
-        box-shadow: 2px 2px 10px var(--shadow-color) !important;
-        border-left: 5px solid var(--primary-green) !important;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.05) !important;
+        border-left: 5px solid #007A33 !important;
         height: 100% !important;
         display: flex !important;
         flex-direction: column !important;
@@ -63,19 +51,19 @@ st.markdown("""
     }
     /* Metric card titles */
     [data-testid="stMetricLabel"] > div {
-        color: var(--text-label) !important;
+        color: #7F8C8D !important;
     }
     /* Metric values */
     [data-testid="stMetricValue"] > div {
-        color: var(--text-main) !important;
+        color: #004D20 !important;
         font-weight: 700;
     }
     /* Arredondamento dos Gráficos/Tabelas */
     .stPlotlyChart, [data-testid="stDataFrame"] {
         border-radius: 15px !important;
         overflow: hidden !important;
-        box-shadow: 2px 2px 10px var(--shadow-color) !important;
-        background-color: var(--card-bg) !important;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.05) !important;
+        background-color: #FFFFFF !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -220,13 +208,13 @@ if len(s_seeg) == 0:
 # ==============================================================================
 if page == "Capa":
     st.markdown("<br><br>", unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; font-size: 3rem; color: var(--primary-green) !important;'>Emissões de Gases do Efeito Estufa no Brasil</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 3rem; color: #007A33 !important;'>Emissões de Gases do Efeito Estufa no Brasil</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; font-weight: 300; margin-bottom: 50px;'>Dashboard Analítico e Mercado de Carbono</h3>", unsafe_allow_html=True)
     
     st.markdown('''
-    <div style="background-color: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 2px 2px 10px var(--shadow-color); text-align: center; max-width: 800px; margin: 0 auto;">
+    <div style="background-color: #FFFFFF; padding: 40px; border-radius: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.05); text-align: center; max-width: 800px; margin: 0 auto;">
         <h4 style="margin-bottom: 20px;">Sobre o Projeto</h4>
-        <p style="font-size: 1.1rem; color: var(--text-label); line-height: 1.6;">
+        <p style="font-size: 1.1rem; color: #7F8C8D; line-height: 1.6;">
             Este painel interativo cruza dados oficiais de emissões (SEEG), uso do solo (MapBiomas), e dados climáticos (NASA) 
             para identificar padrões e oportunidades financeiras focadas na redução da pegada de carbono, especialmente na 
             recuperação de áreas degradadas no setor agropecuário.
@@ -236,7 +224,7 @@ if page == "Capa":
     
     st.markdown("<br><br><br><br>", unsafe_allow_html=True)
     st.markdown('''
-    <div style="text-align: center; color: var(--text-label); font-size: 0.9rem;">
+    <div style="text-align: center; color: #7F8C8D; font-size: 0.9rem;">
         <strong>Projeto criado por:</strong><br>
         Aquiles Soares, Luana Barbosa, Livia Akasaka, Leandro Miranda, Pedro Bonavita, Rafael Pinhal
     </div>
@@ -252,7 +240,7 @@ if page == "Visão Executiva":
     st.markdown("<br>", unsafe_allow_html=True)
     with st.expander("💡 Insight: Visão Executiva"):
         st.markdown("""
-        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+        <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
             <i>Escreva aqui o seu insight sobre o panorama geral das emissões e as oportunidades no mercado de carbono...</i>
         </div>
@@ -323,10 +311,10 @@ if page == "Visão Executiva":
             labels={'setor_nivel1': 'Setor', 'emissao_liquida_toneladas': 'Emissões (tCO₂e)'}
         )
         fig_cols.update_traces(marker_color='#007A33')
-        fig_cols.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+        fig_cols.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
         with st.expander("💡 Insights (Cols)"):
             st.markdown('''
-            <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                 <i>Insira aqui o seu insight sobre este gráfico...</i>
             </div>
             ''', unsafe_allow_html=True)
@@ -353,12 +341,12 @@ if page == "Visão Executiva":
                 }
             )
             fig_area.update_layout(
-                height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20),
+                height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5)
             )
             with st.expander("💡 Insights (Area)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -385,10 +373,10 @@ if page == "Visão Executiva":
                 labels={'emissao_liquida_toneladas': 'Emissões (tCO₂e)', 'setor_nivel3': 'Subcategoria'}
             )
             fig_sub.update_traces(marker_color='#007A33') 
-            fig_sub.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+            fig_sub.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
             with st.expander("💡 Insights (Sub)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -410,12 +398,12 @@ if page == "Visão Executiva":
             )
             fig_map.update_geos(fitbounds="locations", visible=False)
             fig_map.update_layout(
-                height=450, margin={"r":0,"t":25,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
+                height=450, margin={"r":0,"t":25,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
             with st.expander("💡 Insights (Map)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -432,7 +420,7 @@ elif page == "Emissões & Clima":
     st.markdown("<br>", unsafe_allow_html=True)
     with st.expander("💡 Insight: Emissões & Clima"):
         st.markdown("""
-        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+        <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
             <i>Escreva aqui o seu insight sobre como as mudanças climáticas e as chuvas impactam a agropecuária e os projetos de carbono...</i>
         </div>
@@ -504,12 +492,12 @@ elif page == "Emissões & Clima":
                 secondary_y=True,
             )
             fig_dual.update_layout(
-                title="Chuva Média Anual vs Emissões", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=80), height=400,
+                title="Chuva Média Anual vs Emissões", paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80), height=400,
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
             with st.expander("💡 Insights (Dual)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -540,10 +528,10 @@ elif page == "Emissões & Clima":
                 title="Status do Teste de Hipótese por Estado"
             )
             fig_tree.update_traces(textfont=dict(color='white'))
-            fig_tree.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+            fig_tree.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
             with st.expander("💡 Insights (Tree)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -566,12 +554,12 @@ elif page == "Emissões & Clima":
                 labels={'ano': 'Ano', 'emissao_liquida_toneladas': 'Emissões Líquidas (tCO₂e)', 'setor_nivel2': 'Subsetor'}
             )
             fig_area_agro.update_layout(
-                height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=80),
+                height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
             with st.expander("💡 Insights (Area Agro)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -594,12 +582,12 @@ elif page == "Emissões & Clima":
             )
             fig_map_chuva.update_geos(fitbounds="locations", visible=False)
             fig_map_chuva.update_layout(
-                height=400, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
+                height=400, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
             with st.expander("💡 Insights (Map Chuva)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -617,7 +605,7 @@ elif page == "Uso da Terra & Risco":
     st.markdown("<br>", unsafe_allow_html=True)
     with st.expander("💡 Insight: Uso da Terra & Risco"):
         st.markdown("""
-        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+        <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
             <i>Escreva aqui o seu insight sobre o risco de desmatamento, leis como EUDR e como isso afeta a elegibilidade para créditos de carbono...</i>
         </div>
@@ -683,10 +671,10 @@ elif page == "Uso da Terra & Risco":
                 color_discrete_sequence=["#95A5A6", "#E74C3C"], # Cinza para ano inicial, Vermelho para final
                 labels={'Classe': 'Uso do Solo', 'area_ha': 'Área (Mi ha)', 'ano': 'Ano'}
             )
-            fig_bar_comp.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+            fig_bar_comp.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
             with st.expander("💡 Insights (Bar Comp)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -711,10 +699,10 @@ elif page == "Uso da Terra & Risco":
                 title="Alerta EUDR: Desmatamento em Áreas Protegidas",
                 labels={'ano': 'Ano', 'area_ha': 'Área Desmatada (ha)', 'origem_dados': 'Local'}
             )
-            fig_eudr.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+            fig_eudr.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
             with st.expander("💡 Insights (Eudr)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
@@ -732,7 +720,7 @@ elif page == "Pastagens & Carbono":
     st.markdown("<br>", unsafe_allow_html=True)
     with st.expander("💡 Insight: Pastagens & Carbono"):
         st.markdown("""
-        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+        <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
             <i>Escreva aqui o seu insight sobre a oportunidade financeira gigantesca na recuperação de pastagens degradadas para sequestro de carbono...</i>
         </div>
@@ -802,12 +790,12 @@ elif page == "Pastagens & Carbono":
                 )
                 fig_map_deg.update_geos(fitbounds="locations", visible=False)
                 fig_map_deg.update_layout(
-                    height=450, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
+                    height=450, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                     coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
                 )
                 with st.expander("💡 Insights (Map Deg)"):
                     st.markdown('''
-                    <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                         <i>Insira aqui o seu insight sobre este gráfico...</i>
                     </div>
                     ''', unsafe_allow_html=True)
@@ -830,10 +818,10 @@ elif page == "Pastagens & Carbono":
                     labels={'emissao_liquida_toneladas': 'Emissões Agropecuárias (tCO₂e)', 'Area_Degradada': 'Área Degradada (ha)'}
                 )
                 fig_scatter.update_traces(textposition='top center')
-                fig_scatter.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+                fig_scatter.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
                 with st.expander("💡 Insights (Scatter)"):
                     st.markdown('''
-                    <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                         <i>Insira aqui o seu insight sobre este gráfico...</i>
                     </div>
                     ''', unsafe_allow_html=True)
@@ -864,10 +852,10 @@ elif page == "Pastagens & Carbono":
                 labels={'estado': 'Estado', 'Intensidade_Carbono': 'tCO₂e / ha'}
             )
             fig_int.update_traces(marker_color='#1B4332')
-            fig_int.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+            fig_int.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
             with st.expander("💡 Insights (Int)"):
                 st.markdown('''
-                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
                     <i>Insira aqui o seu insight sobre este gráfico...</i>
                 </div>
                 ''', unsafe_allow_html=True)
