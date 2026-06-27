@@ -324,13 +324,13 @@ if page == "Visão Executiva":
         )
         fig_cols.update_traces(marker_color='#007A33')
         fig_cols.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
-    with st.expander("💡 Insights (Cols)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-            st.plotly_chart(fig_cols, use_container_width=True)
+        with st.expander("💡 Insights (Cols)"):
+            st.markdown('''
+            <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <i>Insira aqui o seu insight sobre este gráfico...</i>
+            </div>
+            ''', unsafe_allow_html=True)
+        st.plotly_chart(fig_cols, use_container_width=True)
 
     with c2:
         # Gráfico de Área Empilhada: Evolução Histórica (Movido para cima)
@@ -356,13 +356,13 @@ if page == "Visão Executiva":
                 height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5)
             )
-    with st.expander("💡 Insights (Area)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_area, use_container_width=True)
+            with st.expander("💡 Insights (Area)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_area, use_container_width=True)
 
     # --- GRÁFICOS INFERIORES: Subcategoria e Mapa ---
     st.markdown("<br><br>", unsafe_allow_html=True)
@@ -386,13 +386,13 @@ if page == "Visão Executiva":
             )
             fig_sub.update_traces(marker_color='#007A33') 
             fig_sub.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
-    with st.expander("💡 Insights (Sub)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_sub, use_container_width=True)
+            with st.expander("💡 Insights (Sub)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_sub, use_container_width=True)
             
     with c4:
         # Mapa Coroplético de Emissões (Movido para baixo)
@@ -413,13 +413,13 @@ if page == "Visão Executiva":
                 height=450, margin={"r":0,"t":25,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-    with st.expander("💡 Insights (Map)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_map, use_container_width=True)
+            with st.expander("💡 Insights (Map)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_map, use_container_width=True)
 
 # ==============================================================================
 # PÁGINA 2: EMISSÕES & CLIMA
@@ -507,13 +507,13 @@ elif page == "Emissões & Clima":
                 title="Chuva Média Anual vs Emissões", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=80), height=400,
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-    with st.expander("💡 Insights (Dual)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_dual, use_container_width=True)
+            with st.expander("💡 Insights (Dual)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_dual, use_container_width=True)
             
     with c2:
         chuva_anual_est = s_chuva.groupby(['estado', 'ano'])['Chuva_mm'].sum().reset_index()
@@ -541,13 +541,13 @@ elif page == "Emissões & Clima":
             )
             fig_tree.update_traces(textfont=dict(color='white'))
             fig_tree.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
-    with st.expander("💡 Insights (Tree)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_tree, use_container_width=True)
+            with st.expander("💡 Insights (Tree)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_tree, use_container_width=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     c3, spacer2, c4 = st.columns([1, 0.05, 1])
@@ -569,13 +569,13 @@ elif page == "Emissões & Clima":
                 height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=80),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-    with st.expander("💡 Insights (Area Agro)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_area_agro, use_container_width=True)
+            with st.expander("💡 Insights (Area Agro)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_area_agro, use_container_width=True)
         else:
             st.info("Não há dados de emissões para o setor Agropecuária nesta seleção.")
 
@@ -597,13 +597,13 @@ elif page == "Emissões & Clima":
                 height=400, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-    with st.expander("💡 Insights (Map Chuva)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_map_chuva, use_container_width=True)
+            with st.expander("💡 Insights (Map Chuva)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_map_chuva, use_container_width=True)
         else:
             st.info("Sem dados de chuva para o mapa.")
 
@@ -684,13 +684,13 @@ elif page == "Uso da Terra & Risco":
                 labels={'Classe': 'Uso do Solo', 'area_ha': 'Área (Mi ha)', 'ano': 'Ano'}
             )
             fig_bar_comp.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
-    with st.expander("💡 Insights (Bar Comp)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_bar_comp, use_container_width=True)
+            with st.expander("💡 Insights (Bar Comp)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_bar_comp, use_container_width=True)
             
     with c2:
         # Alarme EUDR - Agora em Gráfico de Área
@@ -712,13 +712,13 @@ elif page == "Uso da Terra & Risco":
                 labels={'ano': 'Ano', 'area_ha': 'Área Desmatada (ha)', 'origem_dados': 'Local'}
             )
             fig_eudr.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
-    with st.expander("💡 Insights (Eudr)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_eudr, use_container_width=True)
+            with st.expander("💡 Insights (Eudr)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_eudr, use_container_width=True)
         else:
             st.success("Zero desmatamento em TI/UC para esta seleção.")
 
@@ -805,13 +805,13 @@ elif page == "Pastagens & Carbono":
                     height=450, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                     coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
                 )
-    with st.expander("💡 Insights (Map Deg)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                    st.plotly_chart(fig_map_deg, use_container_width=True)
+                with st.expander("💡 Insights (Map Deg)"):
+                    st.markdown('''
+                    <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                        <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    </div>
+                    ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_map_deg, use_container_width=True)
                 
         with c2:
             emis_agro_estado = s_seeg[(s_seeg['setor_nivel1'] == 'Agropecuária') & (s_seeg['ano'] == ano_max)].groupby('estado')['emissao_liquida_toneladas'].sum().reset_index()
@@ -831,13 +831,13 @@ elif page == "Pastagens & Carbono":
                 )
                 fig_scatter.update_traces(textposition='top center')
                 fig_scatter.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
-    with st.expander("💡 Insights (Scatter)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                    st.plotly_chart(fig_scatter, use_container_width=True)
+                with st.expander("💡 Insights (Scatter)"):
+                    st.markdown('''
+                    <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                        <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    </div>
+                    ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_scatter, use_container_width=True)
 
         st.markdown("<br><br>", unsafe_allow_html=True)
         
@@ -865,13 +865,13 @@ elif page == "Pastagens & Carbono":
             )
             fig_int.update_traces(marker_color='#1B4332')
             fig_int.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
-    with st.expander("💡 Insights (Int)"):
-        st.markdown('''
-        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-            <i>Insira aqui o seu insight sobre este gráfico...</i>
-        </div>
-        ''', unsafe_allow_html=True)
-                st.plotly_chart(fig_int, use_container_width=True)
+            with st.expander("💡 Insights (Int)"):
+                st.markdown('''
+                <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                </div>
+                ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_int, use_container_width=True)
             
     else:
         st.info("Sem dados de pastagem para esta seleção.")
