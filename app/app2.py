@@ -148,7 +148,20 @@ estados_disponiveis = ["Todos"] + sorted(df_seeg['estado'].dropna().unique())
 biomas_disponiveis = ["Todos"] + sorted(df_seeg['bioma'].dropna().unique())
 
 f_ano = st.sidebar.slider("Ano", min_value=int(min(anos_disponiveis)), max_value=int(max(anos_disponiveis)), value=(2010, 2022))
-f_estado = st.sidebar.selectbox("Estado (UF)", estados_disponiveis)
+# Lógica para capturar o clique no Treemap e alterar o filtro lateral
+if "tree_selection" in st.session_state:
+    sel = st.session_state["tree_selection"]
+    if sel and "selection" in sel and "points" in sel["selection"] and len(sel["selection"]["points"]) > 0:
+        pt = sel["selection"]["points"][0]
+        if "label" in pt and pt["label"] not in ["H0 Rejeitada (Sem Relação)", "H0 Não Rejeitada (Com Relação)"]:
+            clicked_state = pt["label"]
+            if clicked_state in estados_disponiveis and st.session_state.get("last_clicked_state") != clicked_state:
+                st.session_state["filtro_estado"] = clicked_state
+                st.session_state["last_clicked_state"] = clicked_state
+    else:
+        st.session_state["last_clicked_state"] = None
+
+f_estado = st.sidebar.selectbox("Estado (UF)", estados_disponiveis, key="filtro_estado")
 f_bioma = st.sidebar.selectbox("Bioma", biomas_disponiveis)
 
 st.sidebar.markdown("---")
@@ -427,24 +440,6 @@ elif page == "Emissões & Clima":
         </div>
         """, unsafe_allow_html=True)
     
-
-    # --- LÓGICA DE FILTRO INTERATIVO DO TREEMAP ---
-    selected_state = None
-    if "tree_selection" in st.session_state:
-        sel = st.session_state["tree_selection"]
-        if sel and "selection" in sel and "points" in sel["selection"] and len(sel["selection"]["points"]) > 0:
-            pt = sel["selection"]["points"][0]
-            if "label" in pt and pt["label"] not in ["H0 Rejeitada (Sem Relação)", "H0 Não Rejeitada (Com Relação)"]:
-                selected_state = pt["label"]
-                st.info(f"Filtro interativo ativado: Mostrando dados apenas para **{selected_state}**")
-
-    # Copiamos os dataframes originais para não afetar o fig_tree, mas filtramos para o resto
-    s_chuva_filt = s_chuva.copy()
-    s_seeg_filt = s_seeg.copy()
-    if selected_state:
-        s_chuva_filt = s_chuva_filt[s_chuva_filt['estado'] == selected_state]
-        s_seeg_filt = s_seeg_filt[s_seeg_filt['estado'] == selected_state]
-        
     # 1. Preparação dos dados para métricas
     import scipy.stats as stats
     
