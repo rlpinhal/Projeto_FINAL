@@ -159,7 +159,10 @@ if "tree_selection" in st.session_state:
                 st.session_state["filtro_estado"] = clicked_state
                 st.session_state["last_clicked_state"] = clicked_state
     else:
-        st.session_state["last_clicked_state"] = None
+        # Se a seleção está vazia, mas havia um estado clicado anteriormente, significa que o usuário "desclicou"
+        if st.session_state.get("last_clicked_state") is not None:
+            st.session_state["filtro_estado"] = "Todos"
+            st.session_state["last_clicked_state"] = None
 
 f_estado = st.sidebar.selectbox("Estado (UF)", estados_disponiveis, key="filtro_estado")
 f_bioma = st.sidebar.selectbox("Bioma", biomas_disponiveis)
