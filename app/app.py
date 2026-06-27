@@ -17,33 +17,45 @@ st.markdown("""
     :root {
         --primary-green: #007A33;
         --bg-color: #F4F7F6;
+        --card-bg: #FFFFFF;
+        --text-main: #004D20;
+        --text-label: #7F8C8D;
+        --shadow-color: rgba(0,0,0,0.05);
     }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary-green: #4CAF50;
+            --bg-color: #121212;
+            --card-bg: #1E1E1E;
+            --text-main: #E0E0E0;
+            --text-label: #A0A0A0;
+            --shadow-color: rgba(0,0,0,0.5);
+        }
+    }
+
     html, body, [class*="css"], .stApp {
         font-family: 'Inter', sans-serif !important;
     }
     body, .stApp {
-        background-color: #F4F7F6;
+        background-color: transparent !important;
     }
     h1, h2, h3, h4 {
-        color: #004D20 !important;
+        color: var(--text-main) !important;
         font-family: 'Inter', sans-serif;
-    }
-    /* Sidebar Background */
-    [data-testid="stSidebar"] {
-        background-color: #FFFFFF !important;
     }
     /* Labels for filters and titles */
     label, .st-emotion-cache-1yvjcxr label, div[data-testid="stWidgetLabel"] p {
-        color: #7F8C8D !important;
+        color: var(--text-label) !important;
         font-weight: 500;
     }
-    /* Metric Cards - Forçando fundo branco e mesmo tamanho */
+    /* Metric Cards */
     [data-testid="stMetric"] {
-        background-color: #FFFFFF !important;
+        background-color: var(--card-bg) !important;
         border-radius: 15px !important;
         padding: 15px !important;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.05) !important;
-        border-left: 5px solid #007A33 !important;
+        box-shadow: 2px 2px 10px var(--shadow-color) !important;
+        border-left: 5px solid var(--primary-green) !important;
         height: 100% !important;
         display: flex !important;
         flex-direction: column !important;
@@ -51,19 +63,19 @@ st.markdown("""
     }
     /* Metric card titles */
     [data-testid="stMetricLabel"] > div {
-        color: #7F8C8D !important;
+        color: var(--text-label) !important;
     }
     /* Metric values */
     [data-testid="stMetricValue"] > div {
-        color: #004D20 !important;
+        color: var(--text-main) !important;
         font-weight: 700;
     }
     /* Arredondamento dos Gráficos/Tabelas */
     .stPlotlyChart, [data-testid="stDataFrame"] {
         border-radius: 15px !important;
         overflow: hidden !important;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.05) !important;
-        background-color: #FFFFFF !important;
+        box-shadow: 2px 2px 10px var(--shadow-color) !important;
+        background-color: var(--card-bg) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -76,19 +88,18 @@ def load_data():
     project_root = os.path.dirname(current_dir)
     base_dir = os.path.join(project_root, "dados", "02.prata")
     
-    # 1. Crop Yield
-    df_crop = pd.read_csv(os.path.join(base_dir, "kaggle_crop_yield", "crop_yield_silver.csv"))
-    # 2. Cobertura Brasil
+    # 1. Cobertura Brasil
     df_cob = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_cobertura_brasil_nivel1.csv"))
-    # 3. Desmatamento Estado/Bioma
+    # 2. Desmatamento Estado/Bioma
     df_desm_est = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_desmatamento_estado_bioma.csv"))
-    # 4. Desmatamento Geral
+    # 3. Desmatamento Geral
     df_desm = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_desmatamento.csv"))
-    # 5. Pastagem
+    # 4. Pastagem
     df_past = pd.read_csv(os.path.join(base_dir, "mapbiomas", "prata_pastagem.csv"))
-    # 6. Chuva NASA
+    # 5. Chuva NASA
     df_chuva = pd.read_csv(os.path.join(base_dir, "nasa", "prata_nasa_chuva_estados_brasil.csv"), sep=';')
-    # 7. SEEG
+    # 6. SEEG (apenas colunas usadas para economizar memória)
+    seeg_cols = ['ano', 'estado', 'bioma', 'setor_nivel1', 'setor_nivel2', 'setor_nivel3', 'emissao_liquida_toneladas']
     df_seeg = pd.read_csv(os.path.join(base_dir, "SEEG", "prata_seeg_all.csv"), low_memory=False)
     
     # Dicionário de UFs (Pedido do Usuário)
@@ -114,10 +125,10 @@ def load_data():
     if 'estado' in df_seeg.columns:
         df_seeg['estado'] = df_seeg['estado'].str.strip()
         
-    return df_crop, df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg
+    return df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg
 
 with st.spinner("Carregando Camada Silver..."):
-    df_crop, df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg = load_data()
+    df_cob, df_desm_est, df_desm, df_past, df_chuva, df_seeg = load_data()
 
 @st.cache_data
 def load_geojson():
@@ -133,6 +144,7 @@ st.sidebar.markdown("---")
 
 # Menus de Navegação
 page = st.sidebar.radio("Navegação", [
+    "Capa",
     "Visão Executiva", 
     "Emissões & Clima", 
     "Uso da Terra & Risco", 
@@ -204,11 +216,47 @@ if len(s_seeg) == 0:
     st.stop()
 
 # ==============================================================================
+# PÁGINA 0: CAPA
+# ==============================================================================
+if page == "Capa":
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 3rem; color: var(--primary-green) !important;'>Emissões de Gases do Efeito Estufa no Brasil</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; font-weight: 300; margin-bottom: 50px;'>Dashboard Analítico e Mercado de Carbono</h3>", unsafe_allow_html=True)
+    
+    st.markdown('''
+    <div style="background-color: var(--card-bg); padding: 40px; border-radius: 15px; box-shadow: 2px 2px 10px var(--shadow-color); text-align: center; max-width: 800px; margin: 0 auto;">
+        <h4 style="margin-bottom: 20px;">Sobre o Projeto</h4>
+        <p style="font-size: 1.1rem; color: var(--text-label); line-height: 1.6;">
+            Este painel interativo cruza dados oficiais de emissões (SEEG), uso do solo (MapBiomas), e dados climáticos (NASA) 
+            para identificar padrões e oportunidades financeiras focadas na redução da pegada de carbono, especialmente na 
+            recuperação de áreas degradadas no setor agropecuário.
+        </p>
+    </div>
+    ''', unsafe_allow_html=True)
+    
+    st.markdown("<br><br><br><br>", unsafe_allow_html=True)
+    st.markdown('''
+    <div style="text-align: center; color: var(--text-label); font-size: 0.9rem;">
+        <strong>Projeto criado por:</strong><br>
+        Aquiles Soares, Luana Barbosa, Livia Akasaka, Leandro Miranda, Pedro Bonavita, Rafael Pinhal
+    </div>
+    ''', unsafe_allow_html=True)
+
+# ==============================================================================
 # PÁGINA 1: VISÃO EXECUTIVA
 # ==============================================================================
 if page == "Visão Executiva":
     st.header("Visão Executiva & Scorecard ESG")
     st.markdown("<br>", unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("💡 Insight: Visão Executiva"):
+        st.markdown("""
+        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+            <strong>Contexto de Mercado de Carbono</strong><br>
+            <i>Escreva aqui o seu insight sobre o panorama geral das emissões e as oportunidades no mercado de carbono...</i>
+        </div>
+        """, unsafe_allow_html=True)
     
     # Função para formatar os números
     def formatar_numero(valor, unidade=""):
@@ -256,8 +304,10 @@ if page == "Visão Executiva":
     col3.metric("Área Desmatada", formatar_numero(tot_desmatamento, "ha"), help="Área total desmatada bruta em hectares (inclui sobreposição de alertas dependendo do filtro).")
     col4.metric("Potencial Carbono", f"R$ {formatar_numero(receita_carbono)}", help="Estimativa financeira baseada na precificação da recuperação de hectares de pastagens com vigor baixo/médio.")
     
+
+    
     # Mais espaço entre os gráficos
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
     
     c1, spacer, c2 = st.columns([1, 0.05, 1])
     
@@ -273,8 +323,14 @@ if page == "Visão Executiva":
             labels={'setor_nivel1': 'Setor', 'emissao_liquida_toneladas': 'Emissões (tCO₂e)'}
         )
         fig_cols.update_traces(marker_color='#007A33')
-        fig_cols.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-        st.plotly_chart(fig_cols, use_container_width=True)
+        fig_cols.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+    with st.expander("💡 Insights (Cols)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+            st.plotly_chart(fig_cols, use_container_width=True)
 
     with c2:
         # Gráfico de Área Empilhada: Evolução Histórica (Movido para cima)
@@ -297,10 +353,16 @@ if page == "Visão Executiva":
                 }
             )
             fig_area.update_layout(
-                height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20),
+                height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5)
             )
-            st.plotly_chart(fig_area, use_container_width=True)
+    with st.expander("💡 Insights (Area)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_area, use_container_width=True)
 
     # --- GRÁFICOS INFERIORES: Subcategoria e Mapa ---
     st.markdown("<br><br>", unsafe_allow_html=True)
@@ -323,8 +385,14 @@ if page == "Visão Executiva":
                 labels={'emissao_liquida_toneladas': 'Emissões (tCO₂e)', 'setor_nivel3': 'Subcategoria'}
             )
             fig_sub.update_traces(marker_color='#007A33') 
-            fig_sub.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            st.plotly_chart(fig_sub, use_container_width=True)
+            fig_sub.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+    with st.expander("💡 Insights (Sub)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_sub, use_container_width=True)
             
     with c4:
         # Mapa Coroplético de Emissões (Movido para baixo)
@@ -342,10 +410,16 @@ if page == "Visão Executiva":
             )
             fig_map.update_geos(fitbounds="locations", visible=False)
             fig_map.update_layout(
-                height=450, margin={"r":0,"t":25,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
+                height=450, margin={"r":0,"t":25,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-            st.plotly_chart(fig_map, use_container_width=True)
+    with st.expander("💡 Insights (Map)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_map, use_container_width=True)
 
 # ==============================================================================
 # PÁGINA 2: EMISSÕES & CLIMA
@@ -354,6 +428,15 @@ elif page == "Emissões & Clima":
     from plotly.subplots import make_subplots
     st.header("Relação de Emissão e Clima na Agropecuária")
     st.markdown("<br>", unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("💡 Insight: Emissões & Clima"):
+        st.markdown("""
+        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+            <strong>Contexto de Mercado de Carbono</strong><br>
+            <i>Escreva aqui o seu insight sobre como as mudanças climáticas e as chuvas impactam a agropecuária e os projetos de carbono...</i>
+        </div>
+        """, unsafe_allow_html=True)
     
     # 1. Preparação dos dados para métricas
     import scipy.stats as stats
@@ -399,7 +482,9 @@ elif page == "Emissões & Clima":
     col3.metric("Maior Precipitação", estado_mais_chuva, help="Estado com o maior volume acumulado de chuvas no período.")
     col4.metric("Menor Precipitação", estado_menos_chuva, help="Estado com o menor volume acumulado de chuvas no período.")
     
-    st.markdown("<br><br>", unsafe_allow_html=True)
+
+        
+    st.markdown("<br>", unsafe_allow_html=True)
     c1, spacer, c2 = st.columns([1, 0.05, 1])
     
     with c1:
@@ -419,10 +504,16 @@ elif page == "Emissões & Clima":
                 secondary_y=True,
             )
             fig_dual.update_layout(
-                title="Chuva Média Anual vs Emissões", paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80), height=400,
+                title="Chuva Média Anual vs Emissões", paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=80), height=400,
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-            st.plotly_chart(fig_dual, use_container_width=True)
+    with st.expander("💡 Insights (Dual)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_dual, use_container_width=True)
             
     with c2:
         chuva_anual_est = s_chuva.groupby(['estado', 'ano'])['Chuva_mm'].sum().reset_index()
@@ -449,8 +540,14 @@ elif page == "Emissões & Clima":
                 title="Status do Teste de Hipótese por Estado"
             )
             fig_tree.update_traces(textfont=dict(color='white'))
-            fig_tree.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            st.plotly_chart(fig_tree, use_container_width=True)
+            fig_tree.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+    with st.expander("💡 Insights (Tree)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_tree, use_container_width=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     c3, spacer2, c4 = st.columns([1, 0.05, 1])
@@ -469,10 +566,16 @@ elif page == "Emissões & Clima":
                 labels={'ano': 'Ano', 'emissao_liquida_toneladas': 'Emissões Líquidas (tCO₂e)', 'setor_nivel2': 'Subsetor'}
             )
             fig_area_agro.update_layout(
-                height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80),
+                height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=80),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-            st.plotly_chart(fig_area_agro, use_container_width=True)
+    with st.expander("💡 Insights (Area Agro)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_area_agro, use_container_width=True)
         else:
             st.info("Não há dados de emissões para o setor Agropecuária nesta seleção.")
 
@@ -491,10 +594,16 @@ elif page == "Emissões & Clima":
             )
             fig_map_chuva.update_geos(fitbounds="locations", visible=False)
             fig_map_chuva.update_layout(
-                height=400, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
+                height=400, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-            st.plotly_chart(fig_map_chuva, use_container_width=True)
+    with st.expander("💡 Insights (Map Chuva)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_map_chuva, use_container_width=True)
         else:
             st.info("Sem dados de chuva para o mapa.")
 
@@ -504,6 +613,15 @@ elif page == "Emissões & Clima":
 elif page == "Uso da Terra & Risco":
     st.header("Análise de Uso da Terra e Emissões por Desmatamento")
     st.markdown("<br>", unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("💡 Insight: Uso da Terra & Risco"):
+        st.markdown("""
+        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+            <strong>Contexto de Mercado de Carbono</strong><br>
+            <i>Escreva aqui o seu insight sobre o risco de desmatamento, leis como EUDR e como isso afeta a elegibilidade para créditos de carbono...</i>
+        </div>
+        """, unsafe_allow_html=True)
     
     # 1. Emissões totais por desmatamento
     emis_desm = s_seeg[s_seeg['setor_nivel1'] == 'Mudança de Uso da Terra e Floresta']['emissao_liquida_toneladas'].sum()
@@ -535,7 +653,9 @@ elif page == "Uso da Terra & Risco":
     col3.metric("Variação Área Agropecuária", f"{area_agro_max/1e6:,.2f} Mi ha", delta=f"{pct_agro:+.2f}%", delta_color="inverse", help=f"Tamanho da área Agropecuária (Pastagem+Agricultura) em {ano_max_cob} comparado com {ano_min_cob}. (Crescimento é marcado vermelho no contexto de desmatamento)")
     col4.metric("Desmatamento TI / UC", f"{area_desm_ti_uc/1000:,.1f} mil ha", help="Soma total da área desmatada em Terras Indígenas e Unidades de Conservação.")
 
-    st.markdown("<br><br>", unsafe_allow_html=True)
+
+
+    st.markdown("<br>", unsafe_allow_html=True)
     c1, spacer, c2 = st.columns([1, 0.05, 1])
     
     with c1:
@@ -563,8 +683,14 @@ elif page == "Uso da Terra & Risco":
                 color_discrete_sequence=["#95A5A6", "#E74C3C"], # Cinza para ano inicial, Vermelho para final
                 labels={'Classe': 'Uso do Solo', 'area_ha': 'Área (Mi ha)', 'ano': 'Ano'}
             )
-            fig_bar_comp.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            st.plotly_chart(fig_bar_comp, use_container_width=True)
+            fig_bar_comp.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+    with st.expander("💡 Insights (Bar Comp)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_bar_comp, use_container_width=True)
             
     with c2:
         # Alarme EUDR - Agora em Gráfico de Área
@@ -585,8 +711,14 @@ elif page == "Uso da Terra & Risco":
                 title="Alerta EUDR: Desmatamento em Áreas Protegidas",
                 labels={'ano': 'Ano', 'area_ha': 'Área Desmatada (ha)', 'origem_dados': 'Local'}
             )
-            fig_eudr.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            st.plotly_chart(fig_eudr, use_container_width=True)
+            fig_eudr.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+    with st.expander("💡 Insights (Eudr)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_eudr, use_container_width=True)
         else:
             st.success("Zero desmatamento em TI/UC para esta seleção.")
 
@@ -596,6 +728,15 @@ elif page == "Uso da Terra & Risco":
 elif page == "Pastagens & Carbono":
     st.header("Mercado de Carbono e Recuperação de Pastagens")
     st.markdown("<br>", unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+    with st.expander("💡 Insight: Pastagens & Carbono"):
+            st.markdown("""
+        <div style="background-color: var(--primary-green); padding: 20px; border-radius: 10px; color: white;">
+            <strong>Contexto de Mercado de Carbono</strong><br>
+            <i>Escreva aqui o seu insight sobre a oportunidade financeira gigantesca na recuperação de pastagens degradadas para sequestro de carbono...</i>
+        </div>
+        """, unsafe_allow_html=True)
     
     df_vigor = s_past[s_past['origem_dados'] == 'fato_pastagem_vigor']
     if len(df_vigor) > 0:
@@ -628,7 +769,9 @@ elif page == "Pastagens & Carbono":
         help_receita = f"Receita Base: R$ 50/tCO₂e.\nCenário Mínimo (R$ 25/t): R$ {receita_min/1e9:,.2f} Bi\nCenário Máximo (R$ 150/t): R$ {receita_max/1e9:,.2f} Bi"
         col4.metric("Receita de Carbono (Base)", f"R$ {receita_base/1e9:,.2f} Bi", help=help_receita)
 
-        st.markdown("<br><br>", unsafe_allow_html=True)
+
+
+        st.markdown("<br>", unsafe_allow_html=True)
         
         # Preparação de Dados por Estado
         df_vigor_estado = vigor_recente.groupby(['estado', 'classe_nivel_2'])['area_ha'].sum().reset_index()
@@ -659,10 +802,16 @@ elif page == "Pastagens & Carbono":
                 )
                 fig_map_deg.update_geos(fitbounds="locations", visible=False)
                 fig_map_deg.update_layout(
-                    height=450, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
+                    height=450, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                     coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
                 )
-                st.plotly_chart(fig_map_deg, use_container_width=True)
+    with st.expander("💡 Insights (Map Deg)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                    st.plotly_chart(fig_map_deg, use_container_width=True)
                 
         with c2:
             emis_agro_estado = s_seeg[(s_seeg['setor_nivel1'] == 'Agropecuária') & (s_seeg['ano'] == ano_max)].groupby('estado')['emissao_liquida_toneladas'].sum().reset_index()
@@ -681,8 +830,14 @@ elif page == "Pastagens & Carbono":
                     labels={'emissao_liquida_toneladas': 'Emissões Agropecuárias (tCO₂e)', 'Area_Degradada': 'Área Degradada (ha)'}
                 )
                 fig_scatter.update_traces(textposition='top center')
-                fig_scatter.update_layout(height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-                st.plotly_chart(fig_scatter, use_container_width=True)
+                fig_scatter.update_layout(height=450, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+    with st.expander("💡 Insights (Scatter)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                    st.plotly_chart(fig_scatter, use_container_width=True)
 
         st.markdown("<br><br>", unsafe_allow_html=True)
         
@@ -709,8 +864,14 @@ elif page == "Pastagens & Carbono":
                 labels={'estado': 'Estado', 'Intensidade_Carbono': 'tCO₂e / ha'}
             )
             fig_int.update_traces(marker_color='#1B4332')
-            fig_int.update_layout(height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            st.plotly_chart(fig_int, use_container_width=True)
+            fig_int.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', margin=dict(t=40, l=20, r=20, b=20))
+    with st.expander("💡 Insights (Int)"):
+        st.markdown('''
+        <div style="background-color: var(--primary-green); padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+            <i>Insira aqui o seu insight sobre este gráfico...</i>
+        </div>
+        ''', unsafe_allow_html=True)
+                st.plotly_chart(fig_int, use_container_width=True)
             
     else:
         st.info("Sem dados de pastagem para esta seleção.")
