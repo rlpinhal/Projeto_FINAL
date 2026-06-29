@@ -762,7 +762,7 @@ elif page == "Pastagens & Carbono":
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
-            <i>Escreva aqui o seu insight sobre a oportunidade financeira gigantesca na recuperação de pastagens degradadas para sequestro de carbono...</i>
+            <i>Nesta frente estrutural, focamos no mercado voluntário de carbono atrelado à recuperação de pastagens degradadas (baixo ou médio vigor). Estudos indicam um potencial conservador de sequestro de 2 tCO₂e/hectare ao ano nessas áreas. Monetizando a R$ 50/tCO₂e, apenas as pastagens com baixo vigor atuais representam um pipeline (mercado endereçável) superior a R$ 10 bilhões. Transformar degradação em regeneração não é apenas sustentabilidade, é uma das maiores alavancas financeiras do agronegócio.</i>
         </div>
         """, unsafe_allow_html=True)
     
@@ -833,10 +833,10 @@ elif page == "Pastagens & Carbono":
                     height=450, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                     coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
                 )
-                with st.expander("💡 Insights (Map Deg)", expanded=True):
+                with st.expander("💡 Insights", expanded=True):
                     st.markdown('''
                     <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                        <i>Insira aqui o seu insight sobre este gráfico...</i>
+                        <i>Mato Grosso, Mato Grosso do Sul e Minas Gerais despontam no mapa como os maiores celeiros de pastagens degradadas do país. Geograficamente, esses estados concentram a maior oportunidade de originação de créditos de carbono via projetos de regeneração do solo (C-Soil) associados à pecuária.</i>
                     </div>
                     ''', unsafe_allow_html=True)
                 st.plotly_chart(fig_map_deg, use_container_width=True, config={'displayModeBar': False})
@@ -859,10 +859,10 @@ elif page == "Pastagens & Carbono":
                 )
                 fig_scatter.update_traces(textposition='top center')
                 fig_scatter.update_layout(xaxis_title="", height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-                with st.expander("💡 Insights (Scatter)", expanded=True):
+                with st.expander("💡 Insights", expanded=True):
                     st.markdown('''
                     <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                        <i>Insira aqui o seu insight sobre este gráfico...</i>
+                        <i>A dispersão valida que Mato Grosso e Minas Gerais são duplamente críticos: lideram em volume de emissões (tCO₂e) e extensão de área degradada. Eles representam o 'Ground Zero' (foco prioritário) para estruturação de projetos integrados de mitigação e recuperação, garantindo o maior retorno ambiental e financeiro sobre o investimento.</i>
                     </div>
                     ''', unsafe_allow_html=True)
                 st.plotly_chart(fig_scatter, use_container_width=True, config={'displayModeBar': False})
@@ -893,10 +893,10 @@ elif page == "Pastagens & Carbono":
             )
             fig_int.update_traces(marker_color='#1B4332')
             fig_int.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Int)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>O Rio Grande do Sul destaca-se por sua alta intensidade de carbono — reflexo de uma produção pecuária densa concentrada em um espaço menor. Essa alta taxa de emissão por hectare revela que o estado é um candidato premium para a implementação de novas tecnologias de manejo sustentável e aditivos nutricionais (como inibidores de metano), o que viabiliza rapidamente a geração de créditos de alto valor agregado.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_int, use_container_width=True, config={'displayModeBar': False})
