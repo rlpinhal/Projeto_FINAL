@@ -624,7 +624,7 @@ elif page == "Uso da Terra & Risco":
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
-            <i>Escreva aqui o seu insight sobre o risco de desmatamento, leis como EUDR e como isso afeta a elegibilidade para créditos de carbono...</i>
+            <i>Nesta seção, o foco recai sobre o Desmatamento, que se apresenta simultaneamente como o principal gargalo de emissões e a maior oportunidade para originar créditos de carbono (projetos REDD+). O desmatamento possui um efeito duplo e devastador: ele não apenas aniquila o potencial futuro de sequestro de carbono da floresta, como libera instantaneamente na atmosfera o carbono que já estava armazenado na biomassa ao longo de décadas.</i>
         </div>
         """, unsafe_allow_html=True)
     
@@ -689,10 +689,10 @@ elif page == "Uso da Terra & Risco":
                 labels={'Classe': 'Uso do Solo', 'area_ha': 'Área (Mi ha)', 'ano': 'Ano'}
             )
             fig_bar_comp.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Bar Comp)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>Os dados evidenciam uma correlação direta: a retração expressiva das áreas florestais nativas espelha, em quase totalidade, o avanço da fronteira agropecuária. A conversão de terras para expansão de pastagens (pecuária extensiva) e de lavouras comerciais é o principal driver por trás da supressão vegetal.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_bar_comp, use_container_width=True, config={'displayModeBar': False})
@@ -717,15 +717,39 @@ elif page == "Uso da Terra & Risco":
                 labels={'ano': 'Ano', 'area_ha': 'Área Desmatada (ha)', 'origem_dados': 'Local'}
             )
             fig_eudr.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Eudr)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>O avanço do desmatamento sobre Áreas Protegidas (Terras Indígenas e Unidades de Conservação) acende um alerta vermelho para o risco socioambiental. Esse avanço não apenas destrói a biodiversidade e impacta culturas originárias, mas também inviabiliza a comercialização de commodities para mercados exigentes, como a União Europeia, devido a regulamentações rigorosas de compliance ambiental (ex: EUDR).</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_eudr, use_container_width=True, config={'displayModeBar': False})
         else:
             st.success("Zero desmatamento em TI/UC para esta seleção.")
+
+
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    
+    # Novo Gráfico: Evolução do Desmatamento por Bioma
+    df_bioma = s_desm_est.groupby(['ano', 'bioma'])['area_ha'].sum().reset_index()
+    if len(df_bioma) > 0:
+        fig_bioma = px.area(
+            df_bioma,
+            x='ano',
+            y='area_ha',
+            color='bioma',
+            title="Evolução do Desmatamento por Bioma",
+            labels={'ano': 'Ano', 'area_ha': 'Área Desmatada (ha)', 'bioma': 'Bioma'}
+        )
+        fig_bioma.update_layout(xaxis_title="", height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
+        
+        with st.expander("💡 Insights", expanded=True):
+            st.markdown('''
+            <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
+                <i>A Amazônia e o Cerrado lideram historicamente como os biomas mais impactados pelo desmatamento. Esse volume de área suprimida reforça a urgência de concentrar esforços de monitoramento, fiscalização e estruturação de projetos de carbono de conservação (REDD+) e reflorestamento (ARR) nessas regiões críticas.</i>
+            </div>
+            ''', unsafe_allow_html=True)
+        st.plotly_chart(fig_bioma, use_container_width=True, config={'displayModeBar': False})
 
 # ==============================================================================
 # PÁGINA 4: PASTAGENS E CARBONO
