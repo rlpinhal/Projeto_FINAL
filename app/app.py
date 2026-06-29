@@ -258,7 +258,7 @@ if page == "Visão Executiva":
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
-            <i>Escreva aqui o seu insight sobre o panorama geral das emissões e as oportunidades no mercado de carbono...</i>
+            <i>Historicamente, a mudança no uso do solo (desmatamento) e a agropecuária — impulsionada pela fermentação entérica de ruminantes e perda de carbono no solo — são os maiores vetores de emissões de GEE no Brasil. Apenas no setor de pastagens degradadas (baixo vigor), há um potencial subexplorado estimado em mais de R$ 10 bilhões para geração de receitas via mercado de créditos de carbono, aliando sustentabilidade à rentabilidade.</i>
         </div>
         """, unsafe_allow_html=True)
     
@@ -328,10 +328,10 @@ if page == "Visão Executiva":
         )
         fig_cols.update_traces(marker_color='#007A33')
         fig_cols.update_layout(xaxis_title="", height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-        with st.expander("💡 Insights (Cols)", expanded=True):
+        with st.expander("💡 Insights", expanded=True):
             st.markdown('''
             <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                <i>Insira aqui o seu insight sobre este gráfico...</i>
+                <i>A Mudança de Uso da Terra e Floresta é o setor dominante, respondendo historicamente por mais da metade das emissões nacionais. Projetos de carbono focados em conservação florestal (REDD+) e reflorestamento representam a maior alavanca para mitigação.</i>
             </div>
             ''', unsafe_allow_html=True)
         st.plotly_chart(fig_cols, use_container_width=True, config={'displayModeBar': False})
@@ -360,10 +360,10 @@ if page == "Visão Executiva":
                 height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.3, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Area)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>O pico histórico de emissões ocorreu entre 2000 e 2004. A forte queda a partir de 2005 demonstra a eficácia de políticas públicas de controle. Investimentos em conformidade ambiental (como o EUDR) tornaram-se vitais para manter a competitividade internacional.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_area, use_container_width=True, config={'displayModeBar': False})
@@ -390,10 +390,10 @@ if page == "Visão Executiva":
             )
             fig_sub.update_traces(marker_color='#007A33') 
             fig_sub.update_layout(xaxis_title="", height=450, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Sub)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>Apesar da redução histórica, o Desmatamento contínuo lidera como a subcategoria mais crítica. O mercado voluntário de carbono atua diretamente como incentivo econômico para combater essa fronteira de emissões.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_sub, use_container_width=True, config={'displayModeBar': False})
@@ -417,10 +417,10 @@ if page == "Visão Executiva":
                 height=450, margin={"r":0,"t":25,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Map)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>Pará, Mato Grosso e Minas Gerais destacam-se como os maiores emissores, tracionados pela conversão de terras (desmatamento). Em contraste, São Paulo apresenta um perfil industrial e logístico, com emissões lideradas pela malha rodoviária, exigindo diferentes estratégias de descarbonização.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_map, use_container_width=True, config={'displayModeBar': False})
