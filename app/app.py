@@ -438,7 +438,7 @@ elif page == "Emissões & Clima":
         st.markdown("""
         <div style="background-color: #007A33; padding: 20px; border-radius: 10px; color: white;">
             <strong>Contexto de Mercado de Carbono</strong><br>
-            <i>Escreva aqui o seu insight sobre como as mudanças climáticas e as chuvas impactam a agropecuária e os projetos de carbono...</i>
+            <i>Nesta seção, analisamos exclusivamente o setor Agropecuário. Historicamente, observamos que o período de 2012 a 2023 registrou índices de precipitação abaixo da média do século (2000-2024). Testamos a hipótese de que o estresse hídrico e a variação de chuvas nos estados impactam diretamente as emissões da agropecuária, um dado crucial para modelagem de risco físico em projetos de carbono.</i>
         </div>
         """, unsafe_allow_html=True)
     
@@ -511,10 +511,10 @@ elif page == "Emissões & Clima":
                 title="Chuva Média Anual vs Emissões", paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80), height=400,
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Dual)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>O cruzamento das séries temporais ilustra que, mesmo com a anomalia hídrica negativa (chuvas abaixo da média) consolidada entre 2012 e 2023, a curva de emissões apresenta dinâmicas próprias. Isso indica que, no macrocenário, a resiliência das emissões agropecuárias independe das flutuações pluviométricas anuais.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_dual, use_container_width=True, config={'displayModeBar': False})
@@ -545,10 +545,10 @@ elif page == "Emissões & Clima":
             )
             fig_tree.update_traces(textfont=dict(color='white'))
             fig_tree.update_layout(xaxis_title="", height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=20))
-            with st.expander("💡 Insights (Tree)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>Aplicamos testes estatísticos rigorosos de correlação para validar a dependência entre chuva e emissões. O resultado rejeitou a correlação linear em 19 das 27 unidades federativas. Apenas 8 estados demonstraram indícios de que o volume de chuvas afeta as emissões agropecuárias, reforçando que práticas de manejo e expansão do rebanho ditam a pegada de carbono estadual, não o clima.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_tree, use_container_width=True, config={'displayModeBar': False}, on_select="rerun", key="tree_selection")
@@ -573,10 +573,10 @@ elif page == "Emissões & Clima":
                 height=400, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF', margin=dict(t=40, l=20, r=20, b=80),
                 legend=dict(orientation="h", yanchor="bottom", y=-0.5, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Area Agro)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>A composição das emissões agropecuárias varia fortemente regionalmente. Estados como Amapá, Acre, Rondônia, Mato Grosso, Sergipe e Maranhão registraram alta impulsionada pela expansão do rebanho bovino (fermentação entérica). Em contrapartida, polos como São Paulo e Mato Grosso do Sul apresentaram reduções estruturais, viabilizadas por ganhos de produtividade e manejo focado em sequestro de carbono no solo (C-Soil).</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_area_agro, use_container_width=True, config={'displayModeBar': False})
@@ -601,10 +601,10 @@ elif page == "Emissões & Clima":
                 height=400, margin={"r":0,"t":40,"l":0,"b":0}, paper_bgcolor='#FFFFFF', plot_bgcolor='#FFFFFF',
                 coloraxis_colorbar=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
             )
-            with st.expander("💡 Insights (Map Chuva)", expanded=True):
+            with st.expander("💡 Insights", expanded=True):
                 st.markdown('''
                 <div style="background-color: #007A33; padding: 15px; border-radius: 8px; color: white; margin-bottom: 10px;">
-                    <i>Insira aqui o seu insight sobre este gráfico...</i>
+                    <i>A distribuição geográfica da chuva comprova a disparidade climática do país, mas reforça a independência das emissões. Os extremos — Pará (maior índice de chuvas) e Sergipe (menor precipitação) — não possuem emissões atreladas ao volume hídrico, mas sim ditadas puramente por seus estilos de produção e expansão agropecuária.</i>
                 </div>
                 ''', unsafe_allow_html=True)
             st.plotly_chart(fig_map_chuva, use_container_width=True, config={'displayModeBar': False})
